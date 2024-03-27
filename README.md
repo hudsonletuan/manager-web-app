@@ -1,10 +1,13 @@
-# Human Resources Manager
-=====================
+# Human Resources Manager - .NET Core Project
 
 The Human Resources Manager is a web-based application designed to manage employee information for a company. The application allows users to create, read, update, and delete employee records, as well as import and export employee data to and from Excel files.
 
+<h3 align="center"> Deployed on Azure </h3>
+<p align="center">
+  <a href="https://tuanle-hr.azurewebsites.net"><img height="30px" src="https://img.shields.io/badge/Live%20Demo-success.svg?logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IS0tIFVwbG9hZGVkIHRvOiBTVkcgUmVwbywgd3d3LnN2Z3JlcG8uY29tLCBHZW5lcmF0b3I6IFNWRyBSZXBvIE1peGVyIFRvb2xzIC0tPg0KPHN2ZyB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgMCAxOTIgMTkyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiPjxjaXJjbGUgY3g9Ijk2IiBjeT0iOTYiIHI9Ijc0IiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMTIiLz48ZWxsaXBzZSBjeD0iOTYiIGN5PSI5NiIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjEyIiByeD0iMzAiIHJ5PSI3NCIvPjxwYXRoIHN0cm9rZT0iIzAwMDAwMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEyIiBkPSJNMjggNzJoMTM2TTI4IDEyMGgxMzYiLz48L3N2Zz4%3D"></a>
+</p>
+
 ## Features
---------
 
 * User authentication and authorization
 * Employee record management (create, read, update, delete)
@@ -14,7 +17,6 @@ The Human Resources Manager is a web-based application designed to manage employ
 * Responsive design for desktop and mobile devices
 
 ## Technologies Used
------------------
 
 * ASP.NET Core MVC
 * C#
@@ -25,9 +27,9 @@ The Human Resources Manager is a web-based application designed to manage employ
 * Ajax
 * HTML
 * CSS
+* PostgreSQL for Database
 
 ## Getting Started
----------------
 
 To get started with the Human Resources Manager, follow these steps:
 
@@ -38,10 +40,10 @@ git clone https://github.com/hudsonletuan/human-resources-manager.git
 2. Open the solution file (ManagerWebApplication.sln) in Visual Studio.
 3. Restore the NuGet packages for the solution.
 4. Build the solution.
-5. Run the application.
+5. Enter the connection string in appsettings.json file.
+6. Run the application.
 
 ## Usage
------
 
 ### User Authentication and Authorization
 
@@ -74,7 +76,6 @@ git clone https://github.com/hudsonletuan/human-resources-manager.git
 * To select which columns to display in the employee list, click the "Column Select" button on the main page. Check or uncheck the boxes next to the column names to show or hide the columns.
 
 ## Contributing
-------------
 
 If you would like to contribute to the Human Resources Manager, please follow these steps:
 
@@ -84,6 +85,5 @@ If you would like to contribute to the Human Resources Manager, please follow th
 4. Open a pull request to merge your changes into the main branch.
 
 ## License
--------
 
 The Human Resources Manager is licensed under the [MIT License](LICENSE).
