@@ -1,7 +1,7 @@
-# Manager Web Application
+# Human Resources Manager
 =====================
 
-The Manager Web Application is a web-based application designed to manage employee information for a company. The application allows users to create, read, update, and delete employee records, as well as import and export employee data to and from Excel files.
+The Human Resources Manager is a web-based application designed to manage employee information for a company. The application allows users to create, read, update, and delete employee records, as well as import and export employee data to and from Excel files.
 
 ## Features
 --------
@@ -18,27 +18,27 @@ The Manager Web Application is a web-based application designed to manage employ
 
 * ASP.NET Core MVC
 * C#
-* Entity Framework Core
+* ADO.NET
+* JavaScript
 * Bootstrap
 * jQuery
-* HTML5
-* CSS3
+* Ajax
+* HTML
+* CSS
 
 ## Getting Started
 ---------------
 
-To get started with the Manager Web Application, follow these steps:
+To get started with the Human Resources Manager, follow these steps:
 
 1. Clone the repository to your local machine.
 ```bash
-git clone https://github.com/hudsonletuan/manager-web-app.git
+git clone https://github.com/hudsonletuan/human-resources-manager.git
 ```
 2. Open the solution file (ManagerWebApplication.sln) in Visual Studio.
 3. Restore the NuGet packages for the solution.
 4. Build the solution.
 5. Run the application.
-
-Alternatively, you can download the latest release from the [releases](https://github.com/hudsonletuan/manager-web-app/releases) page and run the application directly.
 
 ## Usage
 -----
@@ -76,7 +76,7 @@ Alternatively, you can download the latest release from the [releases](https://g
 ## Contributing
 ------------
 
-If you would like to contribute to the Manager Web Application, please follow these steps:
+If you would like to contribute to the Human Resources Manager, please follow these steps:
 
 1. Fork the repository to your own GitHub account.
 2. Create a new branch for your changes.
@@ -86,4 +86,4 @@ If you would like to contribute to the Manager Web Application, please follow th
 ## License
 -------
 
-The Manager Web Application is licensed under the [MIT License](LICENSE).
+The Human Resources Manager is licensed under the [MIT License](LICENSE).
