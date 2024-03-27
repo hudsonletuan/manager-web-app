@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YEq6EM28Gm9o8YEPhWoAt9aC1G2f9GGSCrD6Bgx9b1U=",
+  "Hash": "18tmV3jRmIOudshyRS0j6inAmOSXHzq0NRXQNzyTii8=",
   "Source": "ManagerWebApplication",
   "BasePath": "_content/ManagerWebApplication",
   "Mode": "Default",
@@ -528,6 +528,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\hr_files\\XLSXTemplate.xlsx"
+    },
+    {
+      "Identity": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\150-20240327165714.png",
+      "SourceId": "ManagerWebApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\",
+      "BasePath": "_content/ManagerWebApplication",
+      "RelativePath": "hr_images/avatar/150-20240327165714.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\hr_images\\avatar\\150-20240327165714.png"
     },
     {
       "Identity": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\AbbotWynneKidd.jpeg",

@@ -105,6 +105,10 @@
       "PackagePath": "staticwebassets\\hr_files\\XLSXTemplate.xlsx"
     },
     {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\150-20240327165714.png",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\150-20240327165714.png"
+    },
+    {
       "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\AbbotWynneKidd.jpeg",
       "PackagePath": "staticwebassets\\hr_images\\avatar\\AbbotWynneKidd.jpeg"
     },

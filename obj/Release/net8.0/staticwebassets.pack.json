@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\ManagerWebApplication.bundle.scp.css"
     },
     {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\Dashboard.css",
+      "PackagePath": "staticwebassets\\css\\Dashboard.css"
+    },
+    {
       "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\EmployeeIndex.css",
       "PackagePath": "staticwebassets\\css\\EmployeeIndex.css"
     },
@@ -13,8 +17,96 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-Black.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-Black.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-BlackItalic.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-BlackItalic.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-Bold.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-Bold.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-BoldItalic.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-BoldItalic.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-ExtraBold.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-ExtraBold.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-ExtraBoldItalic.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-ExtraBoldItalic.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-ExtraLight.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-ExtraLight.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-ExtraLightItalic.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-ExtraLightItalic.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-Light.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-Light.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-LightItalic.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-LightItalic.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-Medium.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-Medium.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-MediumItalic.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-MediumItalic.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-Regular.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-Regular.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-RegularItalic.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-RegularItalic.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-SemiBold.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-SemiBold.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-SemiBoldItalic.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-SemiBoldItalic.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-Thin.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-Thin.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-ThinItalic.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-ThinItalic.woff2"
+    },
+    {
       "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_files\\CSVTemplate.csv",
+      "PackagePath": "staticwebassets\\hr_files\\CSVTemplate.csv"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_files\\XLSTemplate.xls",
+      "PackagePath": "staticwebassets\\hr_files\\XLSTemplate.xls"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_files\\XLSXTemplate.xlsx",
+      "PackagePath": "staticwebassets\\hr_files\\XLSXTemplate.xlsx"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\150-20240327165714.png",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\150-20240327165714.png"
     },
     {
       "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\AbbotWynneKidd.jpeg",
@@ -347,6 +439,10 @@
     {
       "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\GwendolynLaneBall.jpeg",
       "PackagePath": "staticwebassets\\hr_images\\avatar\\GwendolynLaneBall.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\HLT220065-20240306000547.png",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\HLT220065-20240306000547.png"
     },
     {
       "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\HadassahRyanVelez.jpeg",
@@ -821,10 +917,6 @@
       "PackagePath": "staticwebassets\\hr_images\\avatar\\ava-default.png"
     },
     {
-      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\white-temp.webp",
-      "PackagePath": "staticwebassets\\hr_images\\avatar\\white-temp.webp"
-    },
-    {
       "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\others\\addfile.svg",
       "PackagePath": "staticwebassets\\hr_images\\others\\addfile.svg"
     },
@@ -899,6 +991,14 @@
     {
       "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\others\\xlsex.png",
       "PackagePath": "staticwebassets\\hr_images\\others\\xlsex.png"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\others\\xlsxex.png",
+      "PackagePath": "staticwebassets\\hr_images\\others\\xlsxex.png"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\others\\xlsxexp.png",
+      "PackagePath": "staticwebassets\\hr_images\\others\\xlsxexp.png"
     },
     {
       "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\js\\EmployeeJS.js",
@@ -1135,6 +1235,14 @@
     {
       "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\temp\\EmployeeData.xls",
+      "PackagePath": "staticwebassets\\temp\\EmployeeData.xls"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\temp\\EmployeeData.xlsx",
+      "PackagePath": "staticwebassets\\temp\\EmployeeData.xlsx"
     },
     {
       "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.ManagerWebApplication.Microsoft.AspNetCore.StaticWebAssets.props",
