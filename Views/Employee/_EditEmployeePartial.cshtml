@@ -10,10 +10,10 @@
                         <div class="card mb-4">
                             <div class="card-body text-center">
                                 <div class="text-center">
-                                    <input type="text" id="ID" name="ID" value="@Model.ID" required hidden>
-                                    <h5 class="mt-0 mb-2 text-muted employee-id">@Model.ID</h5>
+                                    <input type="text" id="employeeID" name="employeeID" value="@Model.EmployeeID" required hidden />
+                                    <h5 class="mt-0 mb-2 text-muted employee-id">@Model.EmployeeID</h5>
                                 </div>
-                                <img src="@Model.AvaName" alt="avatar"
+                                <img src="@Model.AvatarName" alt="avatar"
                                      id="avatarImageUpdate" class="rounded-circle img-fluid" style="width: 150px; height: 150px; object-fit: cover;">
                                 <hr />
                                 <div class="d-flex justify-content-center mb-2">
@@ -24,7 +24,7 @@
                                 <div class="row">
                                     <div class="card-body text-center">
                                         <div class="d-flex justify-content-center mb-2">
-                                            <button type="button" class="btn btn-danger delete-employee" data-employee-id="@Model.ID">Delete</button>
+                                            <button type="button" class="btn btn-danger delete-employee" data-employee-id="@Model.EmployeeID">Delete</button>
                                         </div>
                                     </div>
                                 </div>
@@ -37,15 +37,15 @@
                                 <div class="row">
                                     <div class="col-4">
                                         <label for="firstName" class="form-label mb-0 required-input">First Name</label>
-                                        <input type="text" class="form-control mb-0 employee-firstname-edit" id="firstName" name="firstName" value="@Model.FirstName" required>
+                                        <input type="text" class="form-control mb-0 employee-firstname-edit" id="firstName" name="firstName" value="@Model.FirstName" required />
                                     </div>
                                     <div class="col-4">
                                         <label for="middleName" class="form-label mb-0">Middle Name</label>
-                                        <input type="text" class="form-control mb-0 employee-middle-edit" id="middleName" name="middleName" value="@Model.MiddleName">
+                                        <input type="text" class="form-control mb-0 employee-middle-edit" id="middleName" name="middleName" value="@Model.MiddleName" />
                                     </div>
                                     <div class="col-4">
                                         <label for="lastName" class="form-label mb-0 required-input">Last Name</label>
-                                        <input type="text" class="form-control mb-0 employee-lastname-edit" id="lastName" name="lastName" value="@Model.LastName" required>
+                                        <input type="text" class="form-control mb-0 employee-lastname-edit" id="lastName" name="lastName" value="@Model.LastName" required />
                                     </div>
                                 </div>
                                 <hr>
@@ -78,39 +78,45 @@
                                 </div>
                                 <hr>
                                 <div class="row">
-                                    <div class="col-auto">
-                                        <label for="genderUpdate" class="form-label mb-0 form-gender-label">Gender</label>
-                                        <p id="genderValue" name="genderValue" value="@Model.Gender" hidden></p>
-                                        <select class="form-control form-select mb-0 form-gender-dropdown" id="genderUpdate" name="genderUpdate">
-                                            <option value="" class="default-gender">Select...</option>
-                                        </select>
+                                    <div class="row" style="margin-bottom: 10px;">
+                                        <div class="col-auto">
+                                            <label for="genderUpdate" class="form-label mb-0 form-gender-label">Gender</label>
+                                            <p id="genderValue" name="genderValue" value="@Model.Gender" hidden></p>
+                                            <select class="form-control form-select mb-0 form-gender-dropdown" id="genderUpdate" name="genderUpdate">
+                                                <option value="" class="default-gender">Select...</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-auto">
+                                            <label for="dateOfBirth" class="form-label mb-0">Date of Birth</label>
+                                            <input type="date" class="form-control mb-0" id="dateOfBirth" name="dateOfBirth" value="@(Model.DateOfBirth != null ? Model.DateOfBirth.Value.ToString("yyyy-MM-dd") : "")" />
+                                        </div>
                                     </div>
-                                    <div class="col-auto">
-                                        <label for="dateOfBirth" class="form-label mb-0">Date of Birth</label>
-                                        <input type="date" class="form-control mb-0" id="dateOfBirth" name="dateOfBirth" value="@(Model.DateOfBirth != null ? Model.DateOfBirth.Value.ToString("yyyy-MM-dd") : "")">
-                                    </div>
-                                    <div class="col-auto">
-                                        <label for="email" class="form-label mb-0">Email</label>
-                                        <input type="text" class="form-control mb-0" id="email" name="email" value="@Model.Email">
-                                    </div>
-                                    <div class="col-auto">
-                                        <label for="phoneNumber" class="form-label mb-0">Phone Number</label>
-                                        <input type="text" class="form-control mb-0" id="phoneNumber" name="phoneNumber" value="@Model.PhoneNumber">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <label for="email" class="form-label mb-0">Email</label>
+                                            <input type="text" class="form-control mb-0" id="email" name="email" value="@Model.Email" />
+                                        </div>
+                                        <div class="col-5">
+                                            <label for="phoneNumber" class="form-label mb-0">Phone Number</label>
+                                            <input type="text" class="form-control mb-0" id="phoneNumber" name="phoneNumber" value="@Model.PhoneNumber" />
+                                        </div>
                                     </div>
                                 </div>
                                 <hr />
                                 <div class="row">
                                     <div class="col-12">
                                         <label for="localAddress" class="form-label mb-0">Address</label>
-                                        <input type="text" class="form-control mb-0" id="localAddress" name="localAddress" value="@Model.LocalAddress">
+                                        <input type="text" class="form-control mb-0" id="localAddress" name="localAddress" value="@Model.LocalAddress" />
                                     </div>
-                                    <div class="col-auto">
-                                        <label for="startDate" class="form-label mb-0">Start Date</label>
-                                        <input type="date" class="form-control mb-0" id="startDate" name="startDate" value="@(Model.StartDate != null ? Model.StartDate.Value.ToString("yyyy-MM-dd") : "")">
-                                    </div>
-                                    <div class="col-auto">
-                                        <label for="endDate" class="form-label mb-0">End Date</label>
-                                        <input type="date" class="form-control mb-0" id="endDate" name="endDate" value="@(Model.EndDate != null ? Model.EndDate.Value.ToString("yyyy-MM-dd") : "")">
+                                    <div class="row" style="margin-top: 10px;">
+                                        <div class="col-auto">
+                                            <label for="startDate" class="form-label mb-0">Start Date</label>
+                                            <input type="date" class="form-control mb-0" id="startDate" name="startDate" value="@(Model.StartDate != null ? Model.StartDate.Value.ToString("yyyy-MM-dd") : "")" />
+                                        </div>
+                                        <div class="col-auto">
+                                            <label for="endDate" class="form-label mb-0">End Date</label>
+                                            <input type="date" class="form-control mb-0" id="endDate" name="endDate" value="@(Model.EndDate != null ? Model.EndDate.Value.ToString("yyyy-MM-dd") : "")" />
+                                        </div>
                                     </div>
                                 </div>
                                 <hr />

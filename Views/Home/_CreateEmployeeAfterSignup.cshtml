@@ -1,0 +1,263 @@
+﻿
+<div class="modal-header" hidden>
+    <h5 class="modal-title" id="createEmployeeModalAfterSignupLabel">Create Employee</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<section>
+    <form id="createEmployeeAfterSignupForm" method="post" enctype="multipart/form-data">
+        <div class="container-xxl">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-3" style="text-align: right;">
+                                    <label for="employeeID" class="form-label mb-0" hidden>ID</label>
+                                    <i class="bi bi-check-circle id-right h3" style="color: green;" hidden></i>
+                                    <i class="bi bi-x-circle id-wrong h3" style="color: red;" hidden></i>
+                                </div>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control mb-0 required-input" style="border: solid 2px" id="employeeID" name="employeeID" placeholder="ID" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <img src="/hr_images/avatar/ava-default.png" alt="avatar"
+                                 id="avatarImage" class="rounded-circle img-fluid" style="width: 150px; height: 150px; object-fit: cover;">
+                            <hr />
+                            <div class="d-flex justify-content-center mb-2">
+                                <input type="file" class="form-control mb-0" id="imageFile" name="imageFile"
+                                       accept="image/jpg, image/jpeg, image/png, image/webp" hidden />
+                                <input type="button" class="btn btn-outline-secondary btn-sm" id="imageBtn" onclick="document.getElementById('imageFile').click()" value="Upload Your Image" />
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <div class="d-flex justify-content-center mb-2">
+                                <button type="submit" class="btn btn-success">Create</button>
+                                <button type="button" class="btn btn-warning btn-clear ms-1">Clear</button>
+                                <button type="button" class="btn btn-secondary ms-1" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-4">
+                                    <label for="firstName" class="form-label mb-0 required-input">First Name</label>
+                                    <input type="text" class="form-control mb-0" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="col-4">
+                                    <label for="middleName" class="form-label mb-0">Middle Name</label>
+                                    <input type="text" class="form-control mb-0" id="middleName" name="middleName">
+                                </div>
+                                <div class="col-4">
+                                    <label for="lastName" class="form-label mb-0 required-input">Last Name</label>
+                                    <input type="text" class="form-control mb-0" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row" id="createDpPsAfterSignup">
+                                <div class="col-auto">
+                                    <label for="departmentName" class="form-label mb-0 required-input">Department</label>
+                                    <select class="form-control form-select mb-0" id="departmentName" name="departmentName" required>
+                                        <option value="" class="default-department"></option>
+                                    </select>
+                                </div>
+                                <div class="col-auto">
+                                    <label for="positionName" id="positionLabel" class="form-label mb-0 required-input">Position</label>
+                                    <select class="form-control form-select mb-0" id="positionName" name="positionName" required>
+                                        <option value="" class="default-position"></option>
+                                    </select>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="row">
+                                <div class="row" style="margin-bottom: 10px;">
+                                    <div class="col-auto">
+                                        <label for="genderCreateAfterSignup" class="form-label mb-0 form-gender-label">Gender</label>
+                                        <select class="form-control form-select mb-0 form-gender-dropdown" id="genderCreateAfterSignup" name="genderCreateAfterSignup">
+                                            <option value="" class="default-gender">Select...</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-auto">
+                                        <label for="dateOfBirth" class="form-label mb-0">Date of Birth</label>
+                                        <input type="date" class="form-control mb-0" id="dateOfBirth" name="dateOfBirth">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-7">
+                                        <label for="email" class="form-label mb-0">Email</label>
+                                        <input type="text" class="form-control mb-0" id="email" name="email">
+                                    </div>
+                                    <div class="col-5">
+                                        <label for="phoneNumber" class="form-label mb-0">Phone Number</label>
+                                        <input type="text" class="form-control mb-0" id="phoneNumber" name="phoneNumber">
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="row">
+                                <div class="col-12">
+                                    <label for="localAddress" class="form-label mb-0">Address</label>
+                                    <input type="text" class="form-control mb-0" id="localAddress" name="localAddress">
+                                </div>
+                                <div class="row" style="margin-top: 10px;">
+                                    <div class="col-auto">
+                                        <label for="startDate" class="form-label mb-0">Start Date</label>
+                                        <input type="date" class="form-control mb-0" id="startDate" name="startDate">
+                                    </div>
+                                    <div class="col-auto">
+                                        <label for="endDate" class="form-label mb-0">End Date</label>
+                                        <input type="date" class="form-control mb-0" id="endDate" name="endDate">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
+
+<!-- Modal showing success-->
+<div class="modal fade" id="createSuccessAfterSignup" tabindex="-1" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered modal-sm modal-success" role="document">
+        <div class="modal-content">
+            <div class="modal-body text-center p-lg-4">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+                    <circle class="path circle" fill="none" stroke="#198754" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1" />
+                    <polyline class="path check" fill="none" stroke="#198754" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 " />
+                </svg>
+                <h4 class="text-success mt-3"></h4>
+                <p class="mt-3"></p>
+                <button type="button" class="btn btn-sm mt-3 btn-success" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal showing conflict confirmation -->
+<div class="modal fade" id="createErrorAfterSignupModal" tabindex="-1" role="dialog" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered modal-sm create-error" role="document">
+        <div class="modal-content">
+            <div class="modal-body text-center p-lg-4">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+                    <circle class="path circle" fill="none" stroke="#db3646" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1" />
+                    <line class="path line" fill="none" stroke="#db3646" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="34.4" y1="37.9" x2="95.8" y2="92.3" />
+                    <line class="path line" fill="none" stroke="#db3646" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="95.8" y1="38" x2="34.4" y2="92.2" />
+                </svg>
+                <h4 class="text-danger mt-3">ID already exists!</h4>
+                <p class="mt-3">Do you mean a different ID or to edit this employee?</p>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Cancel">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .required-input::after {
+        content: " *";
+        color: red;
+    }
+
+    .modal-success .modal-content,
+    .create-error .modal-content {
+        border-radius: 30px;
+    }
+
+        .modal-success .modal-content svg,
+        .create-error .modal-content svg {
+            width: 100px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .modal-success .modal-content .path,
+        .create-error .modal-content .path {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 0;
+        }
+
+            .modal-success .modal-content .path.circle,
+            .create-error .modal-content .path.circle {
+                -webkit-animation: dash 0.9s ease-in-out;
+                animation: dash 0.9s ease-in-out;
+            }
+
+            .modal-success .modal-content .path.line,
+            .create-error .modal-content .path.line {
+                stroke-dashoffset: 1000;
+                -webkit-animation: dash 0.95s 0.35s ease-in-out forwards;
+                animation: dash 0.95s 0.35s ease-in-out forwards;
+            }
+
+            .modal-success .modal-content .path.check,
+            .create-error .modal-content .path.check {
+                stroke-dashoffset: -100;
+                -webkit-animation: dash-check 0.95s 0.35s ease-in-out forwards;
+                animation: dash-check 0.95s 0.35s ease-in-out forwards;
+            }
+
+    @@-webkit-keyframes dash {
+        0% {
+            stroke-dashoffset: 1000;
+        }
+
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @@keyframes dash {
+        0% {
+            stroke-dashoffset: 1000;
+        }
+
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @@-webkit-keyframes dash {
+        0% {
+            stroke-dashoffset: 1000;
+        }
+
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @@keyframes dash {
+        0% {
+            stroke-dashoffset: 1000;
+        }
+
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @@-webkit-keyframes dash-check {
+        0% {
+            stroke-dashoffset: -100;
+        }
+
+        100% {
+            stroke-dashoffset: 900;
+        }
+    }
+
+    @@keyframes dash-check {
+        0% {
+            stroke-dashoffset: -100;
+        }
+
+        100% {
+            stroke-dashoffset: 900;
+        }
+    }
+</style>

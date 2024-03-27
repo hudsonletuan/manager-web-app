@@ -1,0 +1,265 @@
+﻿@model List<Employee>
+
+@{
+    ViewData["Title"] = "Confirm Duplicate Employees";
+}
+
+<div style="display: flex; align-items: center; gap: 10px; justify-content: center;">
+    <img src="/hr_images/others/duplicate.png" alt="">
+    <h4>Duplicate Employee Records</h4>
+</div>
+
+<section class="tablemaindup">
+    <table class="tablehead">
+        <thead class="tablehead sticky-top">
+            <tr>
+                <th><input type="checkbox" class="row-dup-checkbox-all" /></th>
+                <th></th>
+                <th class="text-center">Employee ID</th>
+                <th class="text-center" hidden>First Name</th>
+                <th class="text-center" hidden>Last Name</th>
+                <th class="text-center">Full Name</th>
+                <th class="text-center">Date Of Birth</th>
+                <th class="text-center">Phone Number</th>
+                <th class="text-center" hidden>Email</th>
+                <th class="text-center">Department</th>
+                <th class="text-center">Position</th>
+            </tr>
+        </thead>
+        <tbody id="employeeDuplicateTableBody">
+            @if (Model != null && Model.Any())
+            {
+                @foreach (var employee in Model)
+                {
+                    <tr class="emp-dup-row">
+                        <td>
+                            <input type="checkbox" class="row-dup-checkbox" name="selectedEmployees" value="@employee.EmployeeID" />
+                        </td>
+                        <td class="text-center btn-dup-view">
+                            <button type="button" id="svg-button" class="btn btn-primary view-dup-employee" data-dup-employee-id="@employee.EmployeeID" style="background-color: transparent; border: none; padding: 0; margin: 0;">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                                <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z" />
+                                <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0" />
+                            </svg>
+                            </button>
+                        </td>
+                        <td class="text-center employee-dup-id" data-title="ID">@employee.EmployeeID</td>
+                        <td class="employee-dup-firstname" data-title="First Name" hidden>@employee.FirstName</td>
+                        <td class="employee-dup-middlename" data-title="Middle Name" hidden>@employee.MiddleName</td>
+                        <td class="employee-dup-lastname" data-title="Last Name" hidden>@employee.LastName</td>
+                        <td class="employee-dup-fullname" data-title="Full Name">@employee.FullName</td>
+                        <td class="employee-dup-gender" data-title="Gender" hidden>@employee.Gender</td>
+                        <td class="text-center employee-dup-dateofbirth" data-title="Date Of Birth">@employee.DateOfBirth?.ToShortDateString()</td>
+                        <td class="text-center employee-dup-phonenumber" data-title="Phone Number">@employee.PhoneNumber</td>
+                        <td class="text-center employee-dup-email" data-title="Email" hidden>@employee.Email</td>
+                        <td class="text-center employee-dup-positionid" data-title="Position ID" hidden>@employee.PositionID</td>
+                        <td class="text-center employee-dup-departmentid" data-title="Department ID" hidden>@employee.DepartmentID</td>
+                        <td class="text-center employee-dup-departmentname" data-title="Department">@employee.DepartmentName</td>
+                        <td class="text-center employee-dup-positionname" data-title="Position">@employee.PositionName</td>
+                        <td class="text-center employee-dup-localaddress" data-title="Local Address" hidden>@employee.LocalAddress</td>
+                        <td class="text-center employee-dup-startdate" data-title="Start Date" hidden>@employee.StartDate?.ToShortDateString()</td>
+                        <td class="text-center employee-dup-enddate" data-title="End Date" hidden>@employee.EndDate?.ToShortDateString()</td>
+                        <td class="text-center employee-dup-avatarname" data-title="Avatar Name" hidden>@employee.AvatarName</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="12">
+                        <div>
+                            There is no employee!
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</section>
+<button type="button" id="updateSelectedEmployeesBtn" class="btn btn-primary ms-1">Update Selected Employees</button>
+<button type="button" class="btn btn-danger ms-1" data-bs-dismiss="modal" aria-label="Close">Cancel Update</button>
+
+<!--Modal to display duplicates-->
+<div class="modal fade id-dup-modal-backdrop" id="employeeDuplicationModal" tabindex="-1" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="employeeDuplicationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content" style="border: solid 3px; border-radius: .6rem;">
+            <div class="modal-body text-center p-lg-4">
+                <section class="eachIdDup">
+                    <table class="eachIdDupTable">
+                        <thead>
+                            <tr>
+                                <th class="id-dup-properties"><h4><strong></strong></h4></th>
+                                <th class="id-dup-values text-center">Uploaded</th>
+                                <th class="id-original-values text-center">Existed</th>
+                            </tr>
+                        </thead>
+                        <tbody id="idDupCompare">
+                            <tr class="id-dup-fullname-row">
+                                <td><strong>Full Name</strong></td>
+                                <td class="id-dup-fullname text-center"></td>
+                                <td class="id-original-fullname text-center"></td>
+                            </tr>
+                            <tr class="id-dup-gender-row">
+                                <td><strong>Gender</strong></td>
+                                <td class="id-dup-gender text-center"></td>
+                                <td class="id-original-gender text-center"></td>
+                            </tr>
+                            <tr class="id-dup-dateofbirth-row">
+                                <td><strong>Date Of Birth</strong></td>
+                                <td class="id-dup-dateofbirth text-center"></td>
+                                <td class="id-original-dateofbirth text-center"></td>
+                            </tr>
+                            <tr class="id-dup-phonenumber-row">
+                                <td><strong>Phone Number</strong></td>
+                                <td class="id-dup-phonenumber text-center"></td>
+                                <td class="id-original-phonenumber text-center"></td>
+                            </tr>
+                            <tr class="id-dup-email-row">
+                                <td><strong>Email</strong></td>
+                                <td class="id-dup-email text-center"></td>
+                                <td class="id-original-email text-center"></td>
+                            </tr>
+                            <tr class="id-dup-departmentname-row">
+                                <td><strong>Department</strong></td>
+                                <td class="id-dup-departmentname text-center"></td>
+                                <td class="id-original-departmentname text-center"></td>
+                            </tr>
+                            <tr class="id-dup-positionname-row">
+                                <td><strong>Position</strong></td>
+                                <td class="id-dup-positionname text-center"></td>
+                                <td class="id-original-positionname text-center"></td>
+                            </tr>
+                            <tr class="id-dup-localaddress-row">
+                                <td><strong>Local Address</strong></td>
+                                <td class="id-dup-localaddress text-center"></td>
+                                <td class="id-original-localaddress text-center"></td>
+                            </tr>
+                            <tr class="id-dup-startdate-row">
+                                <td><strong>Start Date</strong></td>
+                                <td class="id-dup-startdate text-center"></td>
+                                <td class="id-original-startdate text-center"></td>
+                            </tr>
+                            <tr class="id-dup-enddate-row">
+                                <td><strong>End Date</strong></td>
+                                <td class="id-dup-enddate text-center"></td>
+                                <td class="id-original-enddate text-center"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr />
+                    <button type="button" class="btn btn-secondary ms-1 btn-dup-close" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal showing duplicate success-->
+<div class="modal fade" id="updateDuplicateSuccess" tabindex="-1" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered modal-sm modal-success" role="document">
+        <div class="modal-content">
+            <div class="modal-body text-center p-lg-4">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+                    <circle class="path circle" fill="none" stroke="#198754" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1" />
+                    <polyline class="path check" fill="none" stroke="#198754" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 " />
+                </svg>
+                <h4 class="text-success mt-3">Overwrite & Import Successfully!</h4>
+                <p class="mt-3"></p>
+                <button type="button" class="btn btn-sm mt-3 btn-success btn-duplicate-done" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .modal-success .modal-content {
+        border-radius: 30px;
+    }
+
+        .modal-success .modal-content svg {
+            width: 100px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .modal-success .modal-content .path {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 0;
+        }
+
+            .modal-success .modal-content .path.circle {
+                -webkit-animation: dash 0.9s ease-in-out;
+                animation: dash 0.9s ease-in-out;
+            }
+
+            .modal-success .modal-content .path.line {
+                stroke-dashoffset: 1000;
+                -webkit-animation: dash 0.95s 0.35s ease-in-out forwards;
+                animation: dash 0.95s 0.35s ease-in-out forwards;
+            }
+
+            .modal-success .modal-content .path.check {
+                stroke-dashoffset: -100;
+                -webkit-animation: dash-check 0.95s 0.35s ease-in-out forwards;
+                animation: dash-check 0.95s 0.35s ease-in-out forwards;
+            }
+
+    @@-webkit-keyframes dash {
+        0% {
+            stroke-dashoffset: 1000;
+        }
+
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @@keyframes dash {
+        0% {
+            stroke-dashoffset: 1000;
+        }
+
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @@-webkit-keyframes dash {
+        0% {
+            stroke-dashoffset: 1000;
+        }
+
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @@keyframes dash {
+        0% {
+            stroke-dashoffset: 1000;
+        }
+
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @@-webkit-keyframes dash-check {
+        0% {
+            stroke-dashoffset: -100;
+        }
+
+        100% {
+            stroke-dashoffset: 900;
+        }
+    }
+
+    @@keyframes dash-check {
+        0% {
+            stroke-dashoffset: -100;
+        }
+
+        100% {
+            stroke-dashoffset: 900;
+        }
+    }
+</style>

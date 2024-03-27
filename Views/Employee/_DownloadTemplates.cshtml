@@ -1,0 +1,91 @@
+﻿<div class="temp-file-download-container">
+    <div class="temp-file-download-card">
+        <h3>Download EXCEL File</h3>
+        <div class="temp-file-download-dropbox">
+            <div class="excel-temps-btn">
+                <a href="/hr_files/XLSTemplate.xls" download="xls_temp_file" class="btn btn-outline-light" role="button">.XLS</a>
+                <a href="/hr_files/XLSXTemplate.xlsx" download="xlsx_temp_file" class="btn btn-outline-light" role="button">.XLSX</a>
+            </div>
+        </div>
+    </div>
+    <div class="temp-file-download-card">
+        <h3>Download .CSV File</h3>
+        <div class="temp-file-download-dropbox">
+            <a href="/hr_files/CSVTemplate.csv" download="csv_temp_file" class="btn btn-outline-light" role="button">.CSV</a>
+        </div>
+    </div>
+</div>
+<div class="temp-note-container">
+    <div class="temp-note">
+        <p align="left">*Do not change or delete headers.</p>
+        <p align="left">*<span style="color: red">Red headers</span> are required fields <i>(Employee ID, First Name, Last Name, and Position ID)</i>.</p>
+        <p align="left"><i>****Any required fields missing will cause the data to be avoided when uploading.</i></p>
+        <p align="left">*Date must be in the format of MM/dd/yyyy or yyyy-MM-dd.</p>
+        <p align="left">*Avatar names must match the image's file names and include file extensions.</p>
+        <p align="left"><i>****Avatar names can be left empty if employees only need to be updated.</i></p>
+    </div>
+</div>
+
+<div align="center"><button type="button" class="btn btn-secondary ms-1" data-bs-dismiss="modal" aria-label="Close">Close</button></div>
+
+<style>
+    .temp-file-download-container {
+        height: 35vh;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .temp-file-download-card {
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 #a3a3a3a3;
+        width: 40%;
+        padding: 20px 30px 30px;
+        margin: 0 20px;
+    }
+
+    .temp-file-download-card h3 {
+        text-align: center;
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .temp-file-download-dropbox {
+        height: 100%;
+        margin: 10px 0;
+        padding: 30px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border: 3px dotted #a3a3a3;
+        border-radius: 5px;
+    }
+
+    .temp-file-download-dropbox h4 {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .temp-note-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .temp-note {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .temp-note p {
+        margin: 0;
+    }
+
+    .excel-temps-btn {
+        flex-direction: row;
+    }
+    .excel-temps-btn a {
+        margin: 0 10px;
+    }
+
+</style>

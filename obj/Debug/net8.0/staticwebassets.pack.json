@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\ManagerWebApplication.bundle.scp.css"
     },
     {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\Dashboard.css",
+      "PackagePath": "staticwebassets\\css\\Dashboard.css"
+    },
+    {
       "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\EmployeeIndex.css",
       "PackagePath": "staticwebassets\\css\\EmployeeIndex.css"
     },
@@ -13,16 +17,900 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-Black.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-Black.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-BlackItalic.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-BlackItalic.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-Bold.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-Bold.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-BoldItalic.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-BoldItalic.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-ExtraBold.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-ExtraBold.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-ExtraBoldItalic.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-ExtraBoldItalic.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-ExtraLight.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-ExtraLight.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-ExtraLightItalic.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-ExtraLightItalic.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-Light.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-Light.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-LightItalic.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-LightItalic.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-Medium.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-Medium.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-MediumItalic.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-MediumItalic.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-Regular.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-Regular.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-RegularItalic.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-RegularItalic.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-SemiBold.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-SemiBold.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-SemiBoldItalic.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-SemiBoldItalic.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-Thin.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-Thin.woff2"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\css\\woff2\\Metropolis-ThinItalic.woff2",
+      "PackagePath": "staticwebassets\\css\\woff2\\Metropolis-ThinItalic.woff2"
+    },
+    {
       "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\ava-default.png",
-      "PackagePath": "staticwebassets\\hr_images\\avatar\\ava-default.png"
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_files\\CSVTemplate.csv",
+      "PackagePath": "staticwebassets\\hr_files\\CSVTemplate.csv"
     },
     {
-      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\white-temp.webp",
-      "PackagePath": "staticwebassets\\hr_images\\avatar\\white-temp.webp"
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_files\\XLSTemplate.xls",
+      "PackagePath": "staticwebassets\\hr_files\\XLSTemplate.xls"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_files\\XLSXTemplate.xlsx",
+      "PackagePath": "staticwebassets\\hr_files\\XLSXTemplate.xlsx"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\AbbotWynneKidd.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\AbbotWynneKidd.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\AbdulAquilaMoore.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\AbdulAquilaMoore.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\AbelIngaPowell.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\AbelIngaPowell.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\AbraBaxterRogers.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\AbraBaxterRogers.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\AbraNormanForbes.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\AbraNormanForbes.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\AhmedBenedictGregory.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\AhmedBenedictGregory.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\AikoShannonMcfadden.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\AikoShannonMcfadden.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\AkeemRebeccaBond.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\AkeemRebeccaBond.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\AldenAthenaAllison.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\AldenAthenaAllison.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\AlexisWallacePitts.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\AlexisWallacePitts.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\AmayaTroyWhitaker.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\AmayaTroyWhitaker.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\AmberJustinOneil.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\AmberJustinOneil.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\AmeliaIraButler.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\AmeliaIraButler.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\AmosNyssaBentley.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\AmosNyssaBentley.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\AmyJacquelineMccullough.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\AmyJacquelineMccullough.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\ArethaJenetteNavarro.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\ArethaJenetteNavarro.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\ArmandRhonaCrawford.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\ArmandRhonaCrawford.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\ArmandScarletHicks.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\ArmandScarletHicks.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\AugustHavivaMccray.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\AugustHavivaMccray.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\AugustLeviMcdonald.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\AugustLeviMcdonald.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\AugustMalcolmHinton.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\AugustMalcolmHinton.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\AureliaIvyMorrow.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\AureliaIvyMorrow.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\AvramClementinePearson.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\AvramClementinePearson.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\AvramDavisBaldwin.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\AvramDavisBaldwin.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\BakerBertHolland.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\BakerBertHolland.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\BarryWillaBrown.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\BarryWillaBrown.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\BasiaMariamFerrell.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\BasiaMariamFerrell.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\ByronOlgaYates.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\ByronOlgaYates.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\CadeDanaShelton.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\CadeDanaShelton.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\CadmanRothStuart.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\CadmanRothStuart.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\CaesarHonoratoWarner.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\CaesarHonoratoWarner.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\CaesarLeilaniReyes.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\CaesarLeilaniReyes.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\CallieLenoreNorman.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\CallieLenoreNorman.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\CallumIvyReese.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\CallumIvyReese.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\CamdenFultonGoodman.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\CamdenFultonGoodman.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\CaraDarrelFrancis.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\CaraDarrelFrancis.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\CarterOriBradford.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\CarterOriBradford.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\CarynPorterHenson.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\CarynPorterHenson.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\CassandraAaronNash.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\CassandraAaronNash.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\CassandraColoradoBarrett.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\CassandraColoradoBarrett.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\CeciliaCherokeeMcpherson.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\CeciliaCherokeeMcpherson.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\ChadwickDylanWilkins.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\ChadwickDylanWilkins.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\ChadwickXylaAnderson.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\ChadwickXylaAnderson.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\ChaimDamianGlover.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\ChaimDamianGlover.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\ChandaDemetriusPatrick.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\ChandaDemetriusPatrick.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\ChandlerEvanMckay.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\ChandlerEvanMckay.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\ChandlerIngaLevy.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\ChandlerIngaLevy.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\ChanningMannixSherman.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\ChanningMannixSherman.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\CharityRooneyGould.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\CharityRooneyGould.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\ChelseaHasadBailey.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\ChelseaHasadBailey.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\CheyenneAldenLeonard.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\CheyenneAldenLeonard.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\CiaraDamonCotton.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\CiaraDamonCotton.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\DemetriusAsherPrice.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\DemetriusAsherPrice.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\DillonLawrenceMerrill.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\DillonLawrenceMerrill.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\DorothyJaymeBooth.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\DorothyJaymeBooth.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\DriscollJaredLarsen.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\DriscollJaredLarsen.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\DustinIndiraBarnes.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\DustinIndiraBarnes.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\EaganStacyMclaughlin.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\EaganStacyMclaughlin.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\EdwardKylynnJoyce.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\EdwardKylynnJoyce.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\ElijahCaldwellHewitt.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\ElijahCaldwellHewitt.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\ElizabethReneeBlake.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\ElizabethReneeBlake.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\ElliottPrestonMcclure.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\ElliottPrestonMcclure.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\ElmoBarryMeyers.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\ElmoBarryMeyers.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\EmeraldMarvinYork.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\EmeraldMarvinYork.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\ErichSybilHughes.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\ErichSybilHughes.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\EthanTylerEwing.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\EthanTylerEwing.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\EvangelineCailinJohns.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\EvangelineCailinJohns.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\FatimaXenosWade.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\FatimaXenosWade.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\FletcherBlytheEspinoza.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\FletcherBlytheEspinoza.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\FlorenceJinMosley.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\FlorenceJinMosley.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\GageLaneColon.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\GageLaneColon.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\GailBasiaMcdowell.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\GailBasiaMcdowell.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\GannonRaymondOliver.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\GannonRaymondOliver.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\GannonVivianWilliamson.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\GannonVivianWilliamson.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\GarySigneReed.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\GarySigneReed.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\GeoffreyNicholasCochran.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\GeoffreyNicholasCochran.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\GeorgiaJamesGates.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\GeorgiaJamesGates.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\GiacomoWandaJoyce.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\GiacomoWandaJoyce.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\GilGailJacobs.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\GilGailJacobs.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\GiselleAustinGoff.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\GiselleAustinGoff.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\GlennaKylieShields.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\GlennaKylieShields.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\GrayAbdulMoran.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\GrayAbdulMoran.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\GwendolynLaneBall.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\GwendolynLaneBall.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\HLT220065-20240306000547.png",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\HLT220065-20240306000547.png"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\HadassahRyanVelez.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\HadassahRyanVelez.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\HakeemErasmusBradley.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\HakeemErasmusBradley.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\HammettHarrietLuna.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\HammettHarrietLuna.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\HarperAshtonHickman.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\HarperAshtonHickman.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\HarrietPamelaOliver.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\HarrietPamelaOliver.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\HasadNasimPeters.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\HasadNasimPeters.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\HashimRudyardBlevins.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\HashimRudyardBlevins.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\HowardGermanePark.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\HowardGermanePark.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\HyacinthYasirAllen.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\HyacinthYasirAllen.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\IdolaJannaHuber.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\IdolaJannaHuber.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\IgnatiusLenSmith.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\IgnatiusLenSmith.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\ImogeneKirkWagner.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\ImogeneKirkWagner.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\IndiaCobyBritt.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\IndiaCobyBritt.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\IndigoIvanHorton.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\IndigoIvanHorton.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\IreneColtonMunoz.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\IreneColtonMunoz.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\IvanWylieRosario.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\IvanWylieRosario.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\IvanaKennethCunningham.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\IvanaKennethCunningham.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\IvorEdwardReese.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\IvorEdwardReese.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\JacobDentonOchoa.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\JacobDentonOchoa.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\JadeJulietCrane.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\JadeJulietCrane.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\JadenLukeLe.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\JadenLukeLe.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\JaelLeroyCollier.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\JaelLeroyCollier.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\JamesonHamiltonThornton.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\JamesonHamiltonThornton.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\JarrodColoradoNichols.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\JarrodColoradoNichols.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\JillianTroyMarks.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\JillianTroyMarks.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\JoyColbyMays.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\JoyColbyMays.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\JulianCallumFarmer.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\JulianCallumFarmer.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\KaitlinChancellorO'Neill.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\KaitlinChancellorO'Neill.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\KamalClioRosa.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\KamalClioRosa.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\KelsiePhoebeJuarez.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\KelsiePhoebeJuarez.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\KelsieUrielWilson.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\KelsieUrielWilson.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\KennanChandaChen.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\KennanChandaChen.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\KermitBrianWorkman.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\KermitBrianWorkman.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\KermitEaganBurnett.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\KermitEaganBurnett.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\KessieChancellorMerritt.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\KessieChancellorMerritt.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\KevynZeleniaGoodwin.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\KevynZeleniaGoodwin.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\KiayadaAuroraLloyd.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\KiayadaAuroraLloyd.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\KimHayesDillon.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\KimHayesDillon.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\KyraIsaacPugh.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\KyraIsaacPugh.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\LaneDustinHenson.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\LaneDustinHenson.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\LaraValentineCantrell.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\LaraValentineCantrell.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\LarsFlaviaGeorge.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\LarsFlaviaGeorge.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\LeroyNereaMccray.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\LeroyNereaMccray.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\LesterMaryamCopeland.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\LesterMaryamCopeland.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\LesterNeroMcgowan.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\LesterNeroMcgowan.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\LindaTravisBooth.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\LindaTravisBooth.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\LucasUriahWaller.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\LucasUriahWaller.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\LuciusFritzRuiz.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\LuciusFritzRuiz.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\LysandraSheaGrimes.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\LysandraSheaGrimes.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\MaconLeilaniVazquez.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\MaconLeilaniVazquez.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\MadelineAristotleJuarez.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\MadelineAristotleJuarez.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\MadonnaRussellHolland.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\MadonnaRussellHolland.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\MaileNolaAbbott.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\MaileNolaAbbott.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\MalcolmHilaryTorres.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\MalcolmHilaryTorres.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\MarnyFreyaSellers.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\MarnyFreyaSellers.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\MatthewMohammadMarks.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\MatthewMohammadMarks.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\MechelleXanthusSuarez.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\MechelleXanthusSuarez.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\MiaRaePratt.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\MiaRaePratt.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\MicahUptonMccoy.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\MicahUptonMccoy.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\MoanaOlympiaMichael.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\MoanaOlympiaMichael.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\MollieNoelChambers.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\MollieNoelChambers.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\NeroAquilaDotson.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\NeroAquilaDotson.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\NicholeWhoopiPadilla.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\NicholeWhoopiPadilla.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\OctaviusBriannaMaxwell.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\OctaviusBriannaMaxwell.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\OlegCurranTate.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\OlegCurranTate.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\PalmerGriffinBarrett.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\PalmerGriffinBarrett.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\PerryLionelHansen.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\PerryLionelHansen.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\PhelanNathanSherman.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\PhelanNathanSherman.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\QuamarCyrusGarner.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\QuamarCyrusGarner.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\QuinnBradyMccray.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\QuinnBradyMccray.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\QuynDorothyParrish.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\QuynDorothyParrish.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\RaeYardleyLeblanc.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\RaeYardleyLeblanc.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\RajaUlricCleveland.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\RajaUlricCleveland.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\RandallRachelNoel.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\RandallRachelNoel.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\RaphaelFlaviaByers.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\RaphaelFlaviaByers.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\RayaDillonLambert.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\RayaDillonLambert.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\RaymondKristenKaufman.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\RaymondKristenKaufman.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\ReeceZenaidaDalton.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\ReeceZenaidaDalton.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\RichardCiaraMcmillan.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\RichardCiaraMcmillan.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\RichardNoelMonroe.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\RichardNoelMonroe.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\RonanHardingFarrell.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\RonanHardingFarrell.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\RussellDonovanHatfield.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\RussellDonovanHatfield.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\RyderSybilMaldonado.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\RyderSybilMaldonado.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\SamuelAmelaBeck.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\SamuelAmelaBeck.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\ScarletAileenReynolds.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\ScarletAileenReynolds.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\ShaeleighMarkSpencer.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\ShaeleighMarkSpencer.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\ShayColbyShields.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\ShayColbyShields.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\SheaIllanaZamora.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\SheaIllanaZamora.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\ShoshanaDavidDelacruz.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\ShoshanaDavidDelacruz.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\SigourneyAlexandraBarnes.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\SigourneyAlexandraBarnes.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\SonyaValentineMarsh.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\SonyaValentineMarsh.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\TaShyaMedgeHorne.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\TaShyaMedgeHorne.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\TanekTashyaMorrison.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\TanekTashyaMorrison.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\TannerScarlettSpence.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\TannerScarlettSpence.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\TatyanaTashyaAshley.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\TatyanaTashyaAshley.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\TobiasJaelAvery.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\TobiasJaelAvery.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\UmaRandallMccall.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\UmaRandallMccall.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\UptonPetraMorton.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\UptonPetraMorton.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\UriahMaggyThomas.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\UriahMaggyThomas.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\UrielMollieSykes.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\UrielMollieSykes.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\VaughanBrendenCarey.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\VaughanBrendenCarey.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\VeronicaLuneaMonroe.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\VeronicaLuneaMonroe.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\VincentRubyDyer.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\VincentRubyDyer.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\VioletAinsleyFinch.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\VioletAinsleyFinch.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\VirginiaLewisPatrick.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\VirginiaLewisPatrick.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\WandaSigourneyCharles.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\WandaSigourneyCharles.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\WendyFreyaPratt.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\WendyFreyaPratt.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\WyattMohammadCameron.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\WyattMohammadCameron.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\WynterFinnDeleon.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\WynterFinnDeleon.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\XanthaGradyWitt.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\XanthaGradyWitt.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\XanthaGrahamHuff.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\XanthaGrahamHuff.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\YardleyCalebSnow.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\YardleyCalebSnow.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\YasirXylaMoss.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\YasirXylaMoss.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\YvetteUnityLowery.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\YvetteUnityLowery.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\YvonneHermioneTrujillo.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\YvonneHermioneTrujillo.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\ZeniaDrakeSweeney.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\ZeniaDrakeSweeney.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\ZoeRashadBishop.jpeg",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\ZoeRashadBishop.jpeg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\avatar\\ava-default.png",
+      "PackagePath": "staticwebassets\\hr_images\\avatar\\ava-default.png"
     },
     {
       "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\others\\addfile.svg",
@@ -43,6 +931,10 @@
     {
       "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\others\\csvexport.svg",
       "PackagePath": "staticwebassets\\hr_images\\others\\csvexport.svg"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\others\\duplicate.png",
+      "PackagePath": "staticwebassets\\hr_images\\others\\duplicate.png"
     },
     {
       "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\others\\excel.png",
@@ -95,6 +987,14 @@
     {
       "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\others\\xlsex.png",
       "PackagePath": "staticwebassets\\hr_images\\others\\xlsex.png"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\others\\xlsxex.png",
+      "PackagePath": "staticwebassets\\hr_images\\others\\xlsxex.png"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\others\\xlsxexp.png",
+      "PackagePath": "staticwebassets\\hr_images\\others\\xlsxexp.png"
     },
     {
       "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\js\\EmployeeJS.js",
@@ -331,6 +1231,14 @@
     {
       "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\temp\\EmployeeData.xls",
+      "PackagePath": "staticwebassets\\temp\\EmployeeData.xls"
+    },
+    {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\temp\\EmployeeData.xlsx",
+      "PackagePath": "staticwebassets\\temp\\EmployeeData.xlsx"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ManagerWebApplication.Microsoft.AspNetCore.StaticWebAssets.props",

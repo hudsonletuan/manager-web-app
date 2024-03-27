@@ -7,8 +7,9 @@ namespace ManagerWebApplication.Models
     public class Employee
     {
         [Key]
+        [DisplayName("Employee ID")]
         [Required]
-        public string? ID { get; set; }
+        public string EmployeeID { get; set; }
 
         [DisplayName("First Name")]
         [Required]
@@ -48,9 +49,6 @@ namespace ManagerWebApplication.Models
         [DisplayName("Department")]
         public string? DepartmentName { get; set; }
 
-        [DisplayName("Salary")]
-        public string? Salary { get; set; }
-
         [DisplayName("Start Date")]
         public DateTime? StartDate { get; set; }
 
@@ -59,11 +57,13 @@ namespace ManagerWebApplication.Models
 
         public Employee()
         {
-            AvaName = ""; // Initialize UrlImage with an empty string
+            AvatarName = ""; // Initialize UrlImage with an empty string
         }
-        public string? AvaName { get; set; }
+        [DisplayName("Avatar Name")]
+        public string? AvatarName { get; set; }
 
         [NotMapped]
+        [DisplayName("Full Name")]
         public string? FullName
         {
             get { 
@@ -76,5 +76,34 @@ namespace ManagerWebApplication.Models
                 }
             }
         }
+    }
+
+    public class EmployeeSubModel
+    {
+        public List<Employee>? Employees { get; set; }
+        public string? Filename { get; set; }
+        public List<string>? Columns { get; set; }
+    }
+
+    public class EmployeeAccount
+    {
+        [Required]
+        [EmailAddress]
+        [DisplayName("Email")]
+        public string? Email_A { get; set; }
+
+        [Required]
+        [DataType(DataType.Password)]
+        [DisplayName("Password")]
+        public string? Password { get; set; }
+
+        [DisplayName("Remember me?")]
+        public bool RememberMe { get; set; }
+    }
+
+    public class EmployeeDepartment
+    {
+        public string? DepartmentID { get; set; }
+        public string? DepartmentName { get; set; }
     }
 }

@@ -1,4 +1,75 @@
 ﻿$(function () {
+    function checkUserActivity() {
+        let userFullName = sessionStorage.getItem('userFullName');
+        let userID = sessionStorage.getItem('userID');
+        let userEmail = sessionStorage.getItem('userEmail');
+
+        // Get the timestamp for the user's last activity
+        let lastActivity = sessionStorage.getItem('lastActivity');
+
+        let currentTime = Date.now();
+        let timeDifference = currentTime - lastActivity;
+        const inactiveThreshold = 5 * 60 * 1000; // 5 minutes in milliseconds
+
+        if (userEmail && userID && userFullName && timeDifference <= inactiveThreshold) {
+            document.getElementById('user-fullname-display').textContent = userFullName;
+            $('#employee-table-index').show();
+
+            // Update the timestamp for the user's last activity
+            sessionStorage.setItem('lastActivity', Date.now());
+        } else if (userEmail && (!userID || !userFullName) && timeDifference <= inactiveThreshold) {
+            $('#addEmployeeBtn').trigger('click');
+            $('#email').val(userEmail);
+        } else {
+            window.location.href = 'Login';
+        }
+    }
+    checkUserActivity();
+
+    const logOutBtn = document.getElementById('usermenu-logout');
+    logOutBtn.addEventListener('click', function () {
+        sessionStorage.clear();
+        window.location.href = '/';
+    });
+
+    const privacyBtn = document.getElementById('usermenu-privacy');
+    privacyBtn.addEventListener('click', function () {
+        $('#recentPassword').val('');
+        $('#newPassword').val('');
+        $('#reNewPassword').val('');
+        document.getElementById('userPrivacyBtn').click();
+    });
+
+    $('#changePassword').on('click', function () {
+        const recentPassword = $('#recentPassword').val();
+        const newPassword = $('#newPassword').val();
+        const reNewPassword = $('#reNewPassword').val();
+
+        if (newPassword !== reNewPassword) {
+            alert('New password does not match.');
+            return;
+        }
+
+        const account = { Email_A: userEmail, Password: reNewPassword };
+
+        $.ajax({
+            type: 'POST',
+            url: '/Employee/UpdateAccount',
+            data: JSON.stringify(account),
+            contentType: 'application/json',
+            success: function (response) {
+                if (response.success) {
+                    alert('Password changed successfully');
+                    $('#changePasswordModal').modal('hide');
+                } else {
+                    alert('Error changing password');
+                }
+            },
+            error: function () {
+                alert('Error changing password');
+            }
+        });
+    });
 
     /*Show the whole employee list*/
     function refreshEmployeeList() {
@@ -7,10 +78,13 @@
             type: 'GET',
             success: function (data) {
                 $('#employeeTableBody').html(data);
+                columnDefault();
                 resetTableSorting();
+                sortTable(1, false);
                 bindSortingEvent();
                 searchTableList();
                 $("#button-header").load(location.href + " #button-header");
+                displayTable();
             },
             error: function () {
                 alert('Data cannot be shown!');
@@ -86,6 +160,30 @@
         });
     });
 
+    $(document).on('click', '#usermenu-edit', function () {
+        let userID = sessionStorage.getItem('userID');
+        let employeeID = userID;
+        $.ajax({
+            url: '/Employee/GetEmployeeEdit',
+            type: 'GET',
+            data: { id: employeeID },
+            success: function (data) {
+                $('#viewEmployeeModal').modal('hide');
+                $('#editEmployee').html(data);
+                $('#editEmployeeModal').modal('show');
+                getPositionOnOpen("editEmployeeForm");
+                getGenderOptions("genderUpdate");
+                getPositionbyDepartment("editEmployeeForm");
+                imageUpdateChange("imageFileUpdate", "avatarImageUpdate");
+            },
+            error: function () {
+                let errorMessage = 'An error occurred while retrieving employee details.';
+                $('#employeeDetails').html('<p>' + errorMessage + '</p>');
+                $('#editEmployeeModal').modal('show');
+            }
+        });
+    })
+
     function imageUpdateChange (fileId, avaId) {
         document.getElementById(fileId).onchange = function () {
             let reader = new FileReader();
@@ -115,6 +213,7 @@
             success: function () {
                 $('#updateSuccess').modal('show');
                 refreshEmployeeList();
+                buttonMultiple();
             },
             error: function () {
                 alert('Error');
@@ -155,7 +254,7 @@
 
     // Bulk Action Dropdown
     document.getElementById("dropdownBulkAction").onclick = function () {
-        var menuBulkAction = document.getElementById("menuBulkAction");
+        let menuBulkAction = document.getElementById("menuBulkAction");
         menuBulkAction.classList.toggle("show");
 
         // Check if the dropdown is not visible and remove focus from the button
@@ -164,22 +263,26 @@
         }
     }
 
-    $('#btn-multiple').on('click', function () {
-        $(this).toggleClass('active');
+    function buttonMultiple() {
+        $('#btn-multiple').on('click', function () {
+            $(this).toggleClass('active');
 
-        const dropdown = document.querySelector('.dropdown');
-        if (dropdown.hasAttribute('hidden')) {
-            dropdown.removeAttribute('hidden');
-        } else {
-            dropdown.setAttribute('hidden', 'true');
-        }
+            const dropdown = document.querySelector('.dropdown');
+            if (dropdown.hasAttribute('hidden')) {
+                dropdown.removeAttribute('hidden');
+            } else {
+                dropdown.setAttribute('hidden', 'true');
+            }
 
-        if ($(this).hasClass('active')) {
-            $('.row-checkbox').css('display', 'block');
-        } else {
-            $('.row-checkbox').css('display', 'none');
-        }
-    });
+            if ($(this).hasClass('active')) {
+                $('.row-checkbox').css('display', 'block');
+            } else {
+                $('.row-checkbox').css('display', 'none');
+            }
+        });
+    }
+
+    buttonMultiple();
 
     // Select All & Unselect All
     $('.select-all').on('click', function (e) {
@@ -195,13 +298,23 @@
         });
     });
 
+    $(document).on('click', '.row-dup-checkbox-all', function () {
+        const isChecked = this.checked;
+        document.querySelectorAll('.row-dup-checkbox').forEach(checkbox => {
+            checkbox.checked = isChecked;
+        });
+    });
+    $(document).on('click', '.row-dup-checkbox', function () {
+        const allCheckboxes = document.querySelectorAll('.row-dup-checkbox:checked').length === document.querySelectorAll('.row-dup-checkbox').length;
+        document.querySelector('.row-dup-checkbox-all').checked = allCheckboxes;
+    });
 
     // Close the dropdown if the user clicks outside of it
     window.onclick = function (event) {
         if (!event.target.matches('.dropdown-bulk-action')) {
-            var dropdowns = document.getElementsByClassName("bulk-action-menu");
-            for (var i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
+            let dropdowns = document.getElementsByClassName("bulk-action-menu");
+            for (let i = 0; i < dropdowns.length; i++) {
+                let openDropdown = dropdowns[i];
                 if (openDropdown.classList.contains('show')) {
                     openDropdown.classList.remove('show');
                     // Remove focus from the button when dropdown is closed
@@ -210,6 +323,35 @@
             }
         }
     }
+
+    //Hide import/export options when clicking outside
+    document.addEventListener('click', function (event) {
+        const input = document.getElementById('import-file');
+        const importDiv = document.querySelector('.import__file');
+
+        if (!importDiv.contains(event.target)) {
+            input.checked = false;
+        }
+    });
+
+    document.addEventListener('click', function (event) {
+        const input = document.getElementById('export-file');
+        const exportDiv = document.querySelector('.export__file');
+
+        if (!exportDiv.contains(event.target)) {
+            input.checked = false;
+        }
+    });
+
+    document.addEventListener('click', function (event) {
+        const input = document.getElementById('user-menu');
+        const exportDiv = document.querySelector('.usermenu');
+
+        if (!exportDiv.contains(event.target)) {
+            input.checked = false;
+        }
+    });
+
 
     // Bulk Delete Employee
     $('.bulk-del').on('click', function (e) {
@@ -254,6 +396,9 @@
             $('#createEmployeeModal').modal('show');
         });
     });
+    $('#closeCreateModalBtn').on('click', function () {
+        clearCreateForm();
+    });
 
     getGenderOptions("genderCreate");
     getPositionbyDepartment("createEmployeeForm");
@@ -282,11 +427,21 @@
             contentType: false,
             success: function () {
                 let firstName = $('#firstName').val();
+                let middleName = $('#middleName').val();
                 let lastName = $('#lastName').val();
-                let id = $('#ID').val();
-                
+                let id = $('#employeeID').val();
+
+                let fullName = firstName + ' ' + (middleName ? middleName + ' ' : '') + lastName;
+
+                let userID = sessionStorage.getItem('userID');
+                if (!userID) {
+                    sessionStorage.setItem('userFullName', fullName);
+                    sessionStorage.setItem('userID', id);
+                    sessionStorage.setItem('lastActivity', Date.now());
+                    checkUserActivity();
+                }
                 $('#createSuccess').modal('show');
-                $('#createSuccess .modal-body h4').text(firstName + ' ' + lastName + ' (' + id + ')');
+                $('#createSuccess .modal-body h4').text(fullName + ' (' + id + ')');
                 $('#createSuccess .modal-body p').text('has been created successfully!');
                 document.querySelector('.id-right').hidden = true;
                 document.querySelector('.id-wrong').hidden = false;
@@ -298,41 +453,49 @@
         });
     });
 
-    $(document).on('click', '#createEmployeeForm .btn-clear', function () {
+    function clearCreateForm() {
         document.getElementById('createEmployeeForm').reset();
-        document.getElementById('avatarImage').src = "/images/ava-default.png";
+        document.getElementById('avatarImage').src = "/hr_images/avatar/ava-default.png";
         document.getElementById('imageFile').value = "";
         document.getElementById("createDpPs").querySelector("#positionLabel").hidden = true;
         document.getElementById("createDpPs").querySelector("#positionName").hidden = true;
         document.querySelector('.id-right').hidden = true;
         document.querySelector('.id-wrong').hidden = true;
+    }
 
+    $(document).on('click', '#createEmployeeForm .btn-clear', function () {
+        clearCreateForm();
     });
-    $('#ID').on('input', function () {
+    $('#employeeID').on('input', function () {
         iDCheck();
     });
 
     function iDCheck() {
-        const currentId = $('#createEmployeeForm [name=ID]').val();
-        $.ajax({
-            url: '/Employee/GetEmployeeDetails',
-            type: 'GET',
-            data: { id: currentId },
-            success: function (response) {
-                if (response.error) {
-                    document.querySelector('.id-right').hidden = false;
+        const currentId = $('#createEmployeeForm [name=employeeID]').val();
+        if (currentId !== null && currentId !== "") {
+            $.ajax({
+                url: '/Employee/GetEmployeeDetails',
+                type: 'GET',
+                data: { id: currentId },
+                success: function (response) {
+                    if (response.error) {
+                        document.querySelector('.id-right').hidden = false;
+                        document.querySelector('.id-wrong').hidden = true;
+                    }
+                    else {
+                        document.querySelector('.id-right').hidden = true;
+                        document.querySelector('.id-wrong').hidden = false;
+                    }
+                },
+                error: function () {
+                    document.querySelector('.id-right').hidden = true;
                     document.querySelector('.id-wrong').hidden = true;
                 }
-                else {
-                    document.querySelector('.id-right').hidden = true;
-                    document.querySelector('.id-wrong').hidden = false;
-                }
-            },
-            error: function () {
-                document.querySelector('.id-right').hidden = true;
-                document.querySelector('.id-wrong').hidden = true;
-            }
-        });
+            });
+        } else {
+            document.querySelector('.id-right').hidden = true;
+            document.querySelector('.id-wrong').hidden = true;
+        }
     }
 
     //Get Positions by Department
@@ -522,6 +685,7 @@
         })
     }
 
+    sortTable(1, false);
     bindSortingEvent();
 
     function sortTable(column, sort_asc) {
@@ -538,6 +702,7 @@
     //Import Employee Data
     const eUploadBtn = document.getElementById('uploadEmpFile');
     const eFileInput = document.getElementById('employeeFile');
+    let nonDuplicates = [];
 
     eUploadBtn.addEventListener('click', function () { 
         eFileInput.click();
@@ -556,10 +721,14 @@
             contentType: false,
             success: function (data) {
                 if (data.success) {
-                    alert('Imported successfully');
+                    $('#importEmployeesSuccess').modal('show');
                     refreshEmployeeList();
                 } else {
-                    alert('Error importing employees');
+                    if (data.duplicates) {
+                        nonDuplicates = data.nonDuplicates;
+                        $('#uploadDuplication .modal-body').html(data.html);
+                        $('#uploadDuplication').modal('show');
+                    }
                 }
             },
             error: function (error) {
@@ -567,6 +736,252 @@
                 console.log(error);
             }
         });
+        this.value = "";
+    });
+
+    //View Duplication
+    $(document).on('click', '.view-dup-employee', function () {
+        let employeeDupId = $(this).data('dup-employee-id');
+        let dupFullName = $(this).closest('tr').find('.employee-dup-fullname').text();
+        let dupGender = $(this).closest('tr').find('.employee-dup-gender').text();
+        let dupDateOfBirth = $(this).closest('tr').find('.employee-dup-dateofbirth').text();
+        let dupPhoneNumber = $(this).closest('tr').find('.employee-dup-phonenumber').text();
+        let dupEmail = $(this).closest('tr').find('.employee-dup-email').text();
+        let dupDepartmentName = $(this).closest('tr').find('.employee-dup-departmentname').text();
+        let dupPositionName = $(this).closest('tr').find('.employee-dup-positionname').text();
+        let dupLocalAddress = $(this).closest('tr').find('.employee-dup-localaddress').text();
+        let dupStartDate = $(this).closest('tr').find('.employee-dup-startdate').text();
+        let dupEndDate = $(this).closest('tr').find('.employee-dup-enddate').text();
+
+        $.ajax({
+            url: '/Employee/GetEmployeeFromId',
+            type: 'GET',
+            data: { id: employeeDupId },
+            success: function (data) {
+                const fullName = data.firstName + " " + (data.middleName ? data.middleName + " " : "") + data.lastName;
+
+                const dOB = data.dateOfBirth ? new Date(data.dateOfBirth) : "";
+                const sD = data.startDate ? new Date(data.startDate) : "";
+                const eD = data.endDate ? new Date(data.endDate) : "";
+
+                const formatDate = (date) => {
+                    const day = date.getDate().toString().padStart(2, '0');
+                    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+                    const year = date.getFullYear();
+                    return `${month}/${day}/${year}`;
+                };
+
+                const dateOfBirth = dOB ? formatDate(dOB) : "";
+                const startDate = sD ? formatDate(sD) : "";
+                const endDate = eD ? formatDate(eD) : "";
+
+                if (fullName !== dupFullName) {
+                    $('.id-dup-fullname').addClass('dup-different');
+                };
+                $('.id-original-fullname').text(fullName);
+                if (data.gender !== dupGender) {
+                    $('.id-dup-gender').addClass('dup-different');
+                };
+                $('.id-original-gender').text(data.gender);
+                if (dateOfBirth !== dupDateOfBirth) {
+                    $('.id-dup-dateofbirth').addClass('dup-different');
+                };
+                $('.id-original-dateofbirth').text(dateOfBirth);
+                if (data.phoneNumber !== dupPhoneNumber) {
+                    $('.id-dup-phonenumber').addClass('dup-different');
+                };
+                $('.id-original-phonenumber').text(data.phoneNumber);
+                if (data.email !== dupEmail) {
+                    $('.id-dup-email').addClass('dup-different');
+                };
+                $('.id-original-email').text(data.email);
+                if (data.departmentName !== dupDepartmentName) {
+                    $('.id-dup-departmentname').addClass('dup-different');
+                };
+                $('.id-original-departmentname').text(data.departmentName);
+                if (data.positionName !== dupPositionName) {
+                    $('.id-dup-positionname').addClass('dup-different');
+                };
+                $('.id-original-positionname').text(data.positionName);
+                if (data.localAddress !== dupLocalAddress) {
+                    $('.id-dup-localaddress').addClass('dup-different');
+                };
+                $('.id-original-localaddress').text(data.localAddress);
+                if (startDate !== dupStartDate) {
+                    $('.id-dup-startdate').addClass('dup-different');
+                };
+                $('.id-original-startdate').text(startDate);
+                if (endDate !== dupEndDate) {
+                    $('.id-dup-enddate').addClass('dup-different');
+                };
+                $('.id-original-enddate').text(endDate);
+            },
+            error: function () {
+                let errorMessage = 'An error occurred while retrieving employee details.';
+            }
+        });
+        $('.id-dup-properties h4 strong').text(employeeDupId);
+        $('.id-dup-fullname').text(dupFullName);
+        $('.id-dup-gender').text(dupGender);
+        $('.id-dup-dateofbirth').text(dupDateOfBirth);
+        $('.id-dup-phonenumber').text(dupPhoneNumber);
+        $('.id-dup-email').text(dupEmail);
+        $('.id-dup-departmentname').text(dupDepartmentName);
+        $('.id-dup-positionname').text(dupPositionName);
+        $('.id-dup-localaddress').text(dupLocalAddress);
+        $('.id-dup-startdate').text(dupStartDate);
+        $('.id-dup-enddate').text(dupEndDate);
+        $('#employeeDuplicationModal').modal('show');
+
+        $('.btn-dup-close').on('click', function () {
+            $('.id-dup-fullname').removeClass('dup-different');
+            $('.id-dup-gender').removeClass('dup-different');
+            $('.id-dup-dateofbirth').removeClass('dup-different');
+            $('.id-dup-phonenumber').removeClass('dup-different');
+            $('.id-dup-email').removeClass('dup-different');
+            $('.id-dup-departmentname').removeClass('dup-different');
+            $('.id-dup-positionname').removeClass('dup-different');
+            $('.id-dup-localaddress').removeClass('dup-different');
+            $('.id-dup-startdate').removeClass('dup-different');
+            $('.id-dup-enddate').removeClass('dup-different');
+        })
+    });
+
+    $(document).on('click', "#updateSelectedEmployeesBtn", function () {
+        let selectedEmployeeIDs = $(".row-dup-checkbox:checked").map(function () {
+            return $(this).val();
+        }).get();
+
+        let employeesToUpdate = [];
+        let completedRequests = 0;
+        if (selectedEmployeeIDs.length > 0) {
+            selectedEmployeeIDs.forEach(function (id) {
+                $.ajax({
+                    url: '/Employee/GetEmployeeFromId',
+                    type: 'GET',
+                    data: { id: id },
+                    success: function (data) {
+                        let $row = $('.emp-dup-row').has('input[value="' + id + '"]');
+                        let avatarName = $row.find('.employee-dup-avatarname').text();
+                        if (!avatarName.trim()) {
+                            avatarName = data.avatarName;
+                        } else {
+                            avatarName = '/hr_images/avatar/' + avatarName;
+                        }
+                        // Check if the date is null or in an invalid format
+                        let dateOfBirth = $row.find('.employee-dup-dateofbirth').text();
+                        let startDate = $row.find('.employee-dup-startdate').text();
+                        let endDate = $row.find('.employee-dup-enddate').text();
+
+                        if (!isNaN(Date.parse(dateOfBirth))) {
+                            dateOfBirth = new Date(dateOfBirth).toISOString();
+                        } else {
+                            dateOfBirth = null; // or handle the invalid date as needed
+                        }
+
+                        if (!isNaN(Date.parse(startDate))) {
+                            startDate = new Date(startDate).toISOString();
+                        } else {
+                            startDate = null; // or handle the invalid date as needed
+                        }
+
+                        if (!isNaN(Date.parse(endDate))) {
+                            endDate = new Date(endDate).toISOString();
+                        } else {
+                            endDate = null; // or handle the invalid date as needed
+                        }
+
+                        let employee = {
+                            EmployeeID: id,
+                            FirstName: $row.find('.employee-dup-firstname').text(),
+                            MiddleName: $row.find('.employee-dup-middlename').text(),
+                            LastName: $row.find('.employee-dup-lastname').text(),
+                            Gender: $row.find('.employee-dup-gender').text(),
+                            DateOfBirth: dateOfBirth,
+                            PhoneNumber: $row.find('.employee-dup-phonenumber').text(),
+                            Email: $row.find('.employee-dup-email').text(),
+                            LocalAddress: $row.find('.employee-dup-localaddress').text(),
+                            PositionID: $row.find('.employee-dup-positionid').text(),
+                            StartDate: startDate,
+                            EndDate: endDate,
+                            AvatarName: avatarName
+                        };
+                        employeesToUpdate.push(employee);
+                        completedRequests++;
+
+                        if (completedRequests === selectedEmployeeIDs.length) {
+                            $.ajax({
+                                type: 'POST',
+                                url: '/Employee/UpdateDuplicatedEmployees',
+                                data: JSON.stringify({ employees: employeesToUpdate, filename: 'duplicates' }),
+                                contentType: 'application/json',
+                                success: function (response) {
+                                    if (nonDuplicates.length > 0) {
+                                        $.ajax({
+                                            type: 'POST',
+                                            url: '/Employee/UpdateDuplicatedEmployees',
+                                            data: JSON.stringify({ employees: nonDuplicates, filename: 'nonDuplicates' }),
+                                            contentType: 'application/json',
+                                            success: function (response) {
+                                                $('#updateDuplicateSuccess').modal('show');
+                                                $('.btn-duplicate-done').on('click', function () {
+                                                    $('#updateDuplicateSuccess').modal('hide');
+                                                    $('#uploadDuplication').modal('hide');
+                                                });
+                                                refreshEmployeeList();
+                                            },
+                                            error: function () {
+                                                alert("An error occurred. Please try again.");
+                                            }
+                                        });
+                                    } else {
+                                        $('#updateDuplicateSuccess').modal('show');
+                                        $('.btn-duplicate-done').on('click', function () {
+                                            $('#updateDuplicateSuccess').modal('hide');
+                                            $('#uploadDuplication').modal('hide');
+                                        });
+                                        refreshEmployeeList();
+                                    }
+                                },
+                                error: function () {
+                                    alert("An error occurred. Please try again.");
+                                }
+                            });
+                        }
+                    },
+                    error: function () {
+                        alert("An error occurred while fetching employee data.");
+                    }
+                });
+            });
+        } else if (nonDuplicates.length > 0) {
+            $.ajax({
+                type: 'POST',
+                url: '/Employee/UpdateDuplicatedEmployees',
+                data: JSON.stringify({ employees: nonDuplicates, filename: 'nonDuplicates' }),
+                contentType: 'application/json',
+                success: function (response) {
+                    $('#updateDuplicateSuccess').modal('show');
+                    $('.btn-duplicate-done').on('click', function () {
+                        $('#updateDuplicateSuccess').modal('hide');
+                        $('#uploadDuplication').modal('hide');
+                    });
+                    refreshEmployeeList();
+                },
+                error: function () {
+                    alert("An error occurred. Please try again.");
+                }
+            });
+        } else {
+            $('#uploadDuplication').modal('hide');
+        }
+    });
+
+    // Download Templates
+    const eTemplateBtn = document.getElementById('downloadTempFile');
+    const eTemplateClick = document.getElementById('downloadTemplateFile');
+    eTemplateBtn.addEventListener('click', function () {
+        eTemplateClick.click();
     });
 
     // Upload Employee Images
@@ -578,6 +993,7 @@
         eIFileInput.click();
     });
 
+    //Upload Folder
     document.getElementById('uploadImageFolder').addEventListener('change', function (event) {
         const files = event.target.files;
         if (files.length > 0) {
@@ -626,4 +1042,574 @@
             });
         }
     });
+
+    const empTable = document.getElementById('emp-index-table-main');
+    //Export Employee Data To PDF
+
+    const exportToPDF = (empTable, columns) => {
+        let clonedTable = empTable.cloneNode(true);
+        let clonedTableBody = clonedTable.querySelector("#employeeTableBody");
+        let selectedColumns = [];
+
+        clonedTable.querySelectorAll("td, th").forEach(cell => {
+            cell.style.display = "none";
+        });
+
+        columns.forEach(columnClass => {
+            let firstCell = clonedTableBody.querySelector(`.${columnClass}`);
+            if (firstCell) {
+                let headerTitle = firstCell.getAttribute('data-title');
+                selectedColumns.push({ class: columnClass, title: headerTitle });
+            }
+        });
+
+        let idOrder = clonedTableBody.querySelectorAll('[id^="employee-"]');
+        let classOrder = [];
+        for (let i = 0; i < idOrder.length; i++) {
+            let idC = idOrder[i].id;
+            idC = idC.replace(/-td/g, '');
+            if (!classOrder.includes(idC)) {
+                classOrder.push(idC);
+            }
+        }
+
+        let selectedColumnsInOrder = [];
+        classOrder.forEach(column => {
+            let checkColumn = selectedColumns.find(e => e.class === column);
+            if (checkColumn) {
+                selectedColumnsInOrder.push({ class: column, title: checkColumn.title });
+            }
+        });
+
+        let newTableHeader = document.createElement("thead");
+        let newTableRow = document.createElement("tr");
+        selectedColumnsInOrder.forEach(column => {
+            let newHeaderCell = document.createElement("th");
+            newHeaderCell.textContent = column.title;
+            newTableRow.appendChild(newHeaderCell);
+        });
+        newTableHeader.appendChild(newTableRow);
+        clonedTable.insertBefore(newTableHeader, clonedTableBody);
+
+        selectedColumnsInOrder.forEach(column => {
+            clonedTable.querySelectorAll(`.${column.class}`).forEach(cell => {
+                cell.style.display = "table-cell";
+            });
+        });
+
+        const html_code = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Employee Data</title>
+            <style>
+            @media print {
+                table, table td, table th {
+                    border: 1px solid #000;
+                    border-collapse: collapse;
+                }
+                table {
+                    width: 100%;
+                }
+                table th, td {
+                    padding: 2px 1px;
+                }
+                .employee-firstname, .employee-middlename, .employee-lastname, .employee-fullname, .employee-localaddress {
+                    padding: 2px 0px 2px 10px !important;
+                }
+                .employee-id, .employee-gender, .employee-dateofbirth, .employee-phonenumber, .employee-email, .employee-departmentname, .employee-positionname, .employee-startdate, .employee-enddate {
+                    text-align: center;
+                }
+            }
+            </style>
+        </head>
+        <body>
+            <table id="emp-index-table-main" class="tablehead"">${clonedTable.innerHTML}</table>
+        </body>
+        </html>`;
+
+        const pdfWindow = window.open("", "PDF_Window", "width=800,height=600,left=100,top=100,resizable,scrollbars");
+        pdfWindow.document.write(html_code);
+        pdfWindow.document.close();
+
+
+        pdfWindow.onload = () => {
+            setTimeout(() => {
+                if (!pdfWindow.closed) {
+                    pdfWindow.focus();
+                    pdfWindow.print();
+                    pdfWindow.close();
+                }
+            }, 250);
+        };
+    };
+
+    document.getElementById('toPDF').addEventListener('click', () => {
+        columnDefault();
+        document.querySelector('.columnToggle[value="employee-fullname"]').parentElement.style.display = "";
+        $('#exportWarnings').modal({
+            keyboard: false,
+            backdrop: 'static'
+        });
+        $('#exportWarnings').modal('show');
+        $('#continue-export-btn').one('click', function () {
+            $('#selectColumnModal').modal({
+                keyboard: false,
+                backdrop: 'static'
+            });
+            $('#selectColumnModal').modal('show');
+            $('#select-column-done-btn').one('click', function () {
+                let columns = Array.from(document.querySelectorAll('.columnToggle:checked')).map(el => el.value);
+                exportToPDF(empTable, columns);
+            });
+        });
+    });
+
+    //Export EXCEL
+
+    //const exportToXLS = (empTable, columns) => {
+    //    let clonedTable = empTable.cloneNode(true);
+    //    let selectedColumns = [];
+
+    //    columns.forEach(columnClass => {
+    //        let columnId = columnClass + '-td';
+    //        let firstCell = clonedTable.querySelector(`#${columnId}`);
+    //        if (firstCell) {
+    //            let headerTitle = firstCell.getAttribute('data-title');
+    //            selectedColumns.push({ id: columnId, title: headerTitle });
+    //        }
+    //    });
+
+    //    let idOrder = clonedTable.querySelectorAll('[id^="employee-"]');
+    //    let unSelectedColumns = [];
+    //    let selectedColumnsInOrder = [];
+    //    for (let i = 0; i < idOrder.length; i++) {
+    //        let idC = idOrder[i].id;
+    //        if (!selectedColumns.find(e => e.id === idC) && !unSelectedColumns.includes(idC)) {
+    //            unSelectedColumns.push(idC);
+    //        } else if (selectedColumns.find(e => e.id === idC) && !selectedColumnsInOrder.find(e => e.id === idC)) {
+    //            let headerTitle = idOrder[i].getAttribute('data-title');
+    //            selectedColumnsInOrder.push({ id: idC, title: headerTitle });
+    //        }
+    //    }
+
+    //    while (clonedTable.querySelector('[id="index-row-check"]')) {
+    //        clonedTable.querySelector('[id="action-in-table"]').remove();
+    //        clonedTable.querySelector('[id="index-row-check"]').remove();
+    //    }
+
+    //    unSelectedColumns.forEach(id => {
+    //        while (clonedTable.querySelector(`#${id}`)) {
+    //            clonedTable.querySelector(`#${id}`).remove();
+    //        }
+    //    });
+
+    //    if (clonedTable.querySelector('thead')) {
+    //        clonedTable.querySelector('thead').remove();
+    //    }
+
+    //    let clonedTableBody = clonedTable.querySelector("#employeeTableBody");
+    //    let newTableHeader = document.createElement("thead");
+    //    let newTableRow = document.createElement("tr");
+    //    selectedColumnsInOrder.forEach(column => {
+    //        let newHeaderCell = document.createElement("th");
+    //        newHeaderCell.textContent = column.title;
+    //        newTableRow.appendChild(newHeaderCell);
+    //    });
+    //    newTableHeader.appendChild(newTableRow);
+    //    clonedTable.insertBefore(newTableHeader, clonedTableBody);
+
+
+    //    const blob = new Blob([clonedTable.outerHTML], { type: 'application/vnd.ms-excel' });
+
+    //    const link = document.createElement('a');
+    //    link.href = URL.createObjectURL(blob);
+    //    link.download = 'EmployeeData.xls';
+    //    document.body.appendChild(link);
+    //    link.click();
+    //    document.body.removeChild(link);
+    //};
+
+    //xlsExportBtn.addEventListener('click', () => {
+    //    $('#selectColumnModal').modal('show');
+    //    $('#select-column-done-btn').one('click', function () {
+    //        let columns = Array.from(document.querySelectorAll('.columnToggle:checked')).map(el => el.value);
+    //        exportToXLS(empTable, columns);
+    //    });
+    //});
+
+    function GetEmployeeFromTable(columns) {
+        const o_table = document.getElementById('emp-index-table-main');
+        const table = o_table.cloneNode(true);
+        const rows = Array.from(document.getElementById('employeeTableBody').querySelectorAll('tr')).filter(row => row.style.display !== 'none');
+        const heads = table.querySelectorAll('thead th');
+        let headers = [];
+        heads.forEach(head => {
+            let spanTag = head.querySelector('span');
+            if (spanTag) {
+                head.removeChild(spanTag);
+            }
+            headers.push({ [head.getAttribute('data-title')]: head.textContent.trim() });
+        })
+
+        let sColumns = [];
+        columns.forEach(column => {
+            column = column + '-td';
+            sColumns.push(table.querySelector(`#${column}`).getAttribute('data-title'));
+        });
+
+        let sColumnsInOrder = [];
+        headers.forEach(header => {
+            let headerVal = Object.values(header)[0];
+            if (sColumns.includes(headerVal)) {
+                let headerKey = Object.keys(header)[0];
+                sColumnsInOrder.push({ key: headerKey, value: headerVal });
+            }
+        });
+        const employeeList = [];
+
+        rows.forEach(row => {
+            const employee = {};
+            sColumnsInOrder.forEach((column, i) => {
+                const cell = row.querySelector(`td[data-title="${column.value}"]`);
+                if (cell) {
+                    let cellValue = cell.textContent;
+                    if (['DateOfBirth', 'StartDate', 'EndDate'].includes(column.key)) {
+                        if (!isNaN(Date.parse(cellValue))) {
+                            const date = new Date(cellValue);
+                            cellValue = date.toISOString();
+                        } else {
+                            cellValue = null;
+                        }
+                    }
+                    employee[column.key] = cellValue;
+                }
+            });
+            employeeList.push(employee);
+        });
+        return employeeList;
+    }
+
+    //function GetEmployeeFromTable() {
+    //    const table = document.getElementById('emp-index-table-main');
+    //    const rows = Array.from(document.getElementById('employeeTableBody').querySelectorAll('tr'));
+    //    const heads = table.querySelectorAll('thead th');
+    //    let headers = [];
+    //    heads.forEach(head => {
+    //        let spanTag = head.querySelector('span');
+    //        if (spanTag) {
+    //            head.removeChild(spanTag);
+    //        }
+    //        headers.push({ [head.getAttribute('data-title')]: head.textContent.trim() });
+    //    });
+    //    headers.shift();
+    //    headers.pop();
+    //    console.log(headers);
+    //    let employeeList = [];
+    //    rows.forEach(row => {
+    //        const employee = {};
+    //        headers.forEach(header => {
+    //            const headerKey = Object.keys(header)[0];
+    //            const headerVal = Object.values(header)[0];
+    //            const cell = row.querySelector(`td[data-title="${headerVal}"]`);
+    //            if (cell) {
+    //                let cellValue = cell.textContent;
+    //                if (['DateOfBirth', 'StartDate', 'EndDate'].includes(headerKey)) {
+    //                    if (!isNaN(Date.parse(cellValue))) {
+    //                        const date = new Date(cellValue);
+    //                        cellValue = date.toISOString();
+    //                    } else {
+    //                        cellValue = null;
+    //                    }
+    //                }
+    //                employee[headerKey] = cellValue;
+    //            }
+    //        });
+    //        console.log(employee);
+    //        employeeList.push(employee);
+    //    });
+    //    return employeeList;
+    //}
+
+    function employeeToCSV(empList) {
+        let csvRows = [];
+        let headerRow = Object.keys(empList[0]).join(',');
+        csvRows.push(headerRow);
+
+        empList.forEach(employee => {
+            let row = [];
+            for (let key in employee) {
+                let cellValue = employee[key];
+                if (["DateOfBirth", "StartDate", "EndDate"].includes(key)) {
+                    if (cellValue) {
+                        cellValue = new Date(cellValue).toLocaleDateString();
+                    }
+                }
+                row.push(cellValue);
+            }
+            csvRows.push(row);
+        });
+        return csvRows.join('\n');
+    }
+
+    document.getElementById('toCSV').addEventListener('click', function () {
+        columnDefault();
+        let fullNameChecked = document.querySelector('.columnToggle[value="employee-fullname"]').checked;
+        document.querySelector('.columnToggle[value="employee-fullname"]').checked = false;
+        document.querySelector('.columnToggle[value="employee-fullname"]').parentElement.style.display = "none";
+        $('#exportWarnings').modal({
+            keyboard: false,
+            backdrop: 'static'
+        });
+        $('#exportWarnings').modal('show');
+        $('#continue-export-btn').one('click', function () {
+            $('#selectColumnModal').modal({
+                keyboard: false,
+                backdrop: 'static'
+            });
+            $('#selectColumnModal').modal('show');
+            $('#select-column-done-btn').one('click', function () {
+                const columns = Array.from(document.querySelectorAll('.columnToggle:checked')).map(el => el.value);
+                let sColumns = [];
+                columns.forEach(column => {
+                    column = 'th-' + column;
+                    sColumns.push(document.getElementById('emp-index-table-main').querySelector(`#${column}`).getAttribute('data-title'));
+                });
+                const csvEmpList = GetEmployeeFromTable(columns);
+                const csvData = employeeToCSV(csvEmpList);
+                const csvBlob = new Blob([csvData], { type: 'text/csv' });
+                const csvUrl = URL.createObjectURL(csvBlob);
+
+                const link = document.createElement('a');
+                link.href = csvUrl;
+                link.download = 'EmployeeData.csv';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(csvUrl);
+
+                document.querySelector('.columnToggle[value="employee-fullname"]').checked = fullNameChecked;
+                columnDefault();
+            });
+        });
+    });
+
+    document.getElementById('toXLS').addEventListener('click', function () {
+        columnDefault();
+        let fullNameChecked = document.querySelector('.columnToggle[value="employee-fullname"]').checked;
+        document.querySelector('.columnToggle[value="employee-fullname"]').checked = false;
+        document.querySelector('.columnToggle[value="employee-fullname"]').parentElement.style.display = "none";
+        $('#exportWarnings').modal({
+            keyboard: false,
+            backdrop: 'static'
+        });
+        $('#exportWarnings').modal('show');
+        $('#continue-export-btn').one('click', function () {
+            $('#selectColumnModal').modal({
+                keyboard: false,
+                backdrop: 'static'
+            });
+            $('#selectColumnModal').modal('show');
+            $('#select-column-done-btn').one('click', function () {
+                const columns = Array.from(document.querySelectorAll('.columnToggle:checked')).map(el => el.value);
+                let sColumns = [];
+                columns.forEach(column => {
+                    column = 'th-' + column;
+                    sColumns.push(document.getElementById('emp-index-table-main').querySelector(`#${column}`).getAttribute('data-title'));
+                });
+                exportExcel(GetEmployeeFromTable(columns), 'EmployeeData.xls', sColumns);
+                document.querySelector('.columnToggle[value="employee-fullname"]').checked = fullNameChecked;
+                columnDefault();
+            });
+        });
+    });
+    document.getElementById('toXLSX').addEventListener('click', function () {
+        columnDefault();
+        document.querySelector('.columnToggle[value="employee-fullname"]').checked = false;
+        document.querySelector('.columnToggle[value="employee-fullname"]').parentElement.style.display = "none";
+        $('#exportWarnings').modal({
+            keyboard: false,
+            backdrop: 'static'
+        });
+        $('#exportWarnings').modal('show');
+        $('#continue-export-btn').one('click', function () {
+            $('#selectColumnModal').modal({
+                keyboard: false,
+                backdrop: 'static'
+            });
+            $('#selectColumnModal').modal('show');
+            $('#select-column-done-btn').one('click', function () {
+                const columns = Array.from(document.querySelectorAll('.columnToggle:checked')).map(el => el.value);
+                let sColumns = [];
+                columns.forEach(column => {
+                    column = 'th-' + column;
+                    sColumns.push(document.getElementById('emp-index-table-main').querySelector(`#${column}`).getAttribute('data-title'));
+                });
+                exportExcel(GetEmployeeFromTable(columns), 'EmployeeData.xlsx', sColumns);
+                document.querySelector('.columnToggle[value="employee-fullname"]').checked = fullNameChecked;
+                columnDefault();
+            });
+        });
+    });
+
+    function columnDefault() {
+        let visibleColumns = $("#emp-index-table-main thead th:visible");
+        $('.column-options').find('input').prop('checked', false);
+        visibleColumns.each(function () {
+            let columnClass = '';
+            // Check if the element exists before trying to access its properties
+            if ($(this).attr('id')) {
+                columnClass = $(this).attr('id').replace('th-', '');
+            }
+            $('.column-options').find(`input[value="${columnClass}"]`).prop('checked', true);
+        });
+    }
+    columnDefault();
+
+    function displayTable() {
+        const columns = Array.from(document.querySelectorAll('.columnToggle:checked')).map(el => el.value);
+        $('#employeeTableBody').find('td[id^="employee-"]').attr('hidden', true);
+        $('#emp-index-table-main').find('th[id^="th-"]').attr('hidden', true);
+        columns.forEach(column => {
+            let columnTh = 'th-' + column;
+            let columnTd = column + '-td';
+            $('#emp-index-table-main').find(`th[id="${columnTh}"]`).removeAttr('hidden');
+            $('#employeeTableBody').find(`td[id="${columnTd}"]`).removeAttr('hidden');
+        });
+    }
+
+    document.getElementById('columnSelect').addEventListener('click', function () {
+        document.querySelector('.columnToggle[value="employee-fullname"]').parentElement.style.display = "";
+        columnDefault();
+        $('#select-column-done-btn').one('click', function () {
+            displayTable();
+        });
+    });
+    function exportExcel(empList, filename, columns) {
+        $.ajax({
+            url: '/Employee/ExportToExcel',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({ employees: empList, filename: filename, columns: columns }),
+            success: function (data) {
+                downloadExcel(data);
+            },
+            error: function () {
+                alert('Error exporting');
+            }
+        });
+    }
+
+    function downloadExcel(filePath) {
+        var link = document.createElement('a');
+        link.href = '/Employee/DownloadExcelFile?filePath=' + encodeURIComponent(filePath);
+        link.download = filePath.split('/').pop();
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
 });
+
+function signUp() {
+    var email = $("#signemail").val();
+    var password = $("#signpassword").val();
+    var repassword = $("#signrepassword").val();
+
+    if (password != repassword) {
+        alert("Passwords do not match!");
+        return;
+    }
+
+    $.ajax({
+        type: "GET",
+        url: "/Employee/GetEmployeeFromEmail?email=" + email,
+        contentType: "application/json",
+        dataType: "json",
+        success: function (response) {
+            if (response.error) {
+                var account = {
+                    Email_A: email,
+                    Password: repassword
+                };
+                $.ajax({
+                    type: "POST",
+                    url: "/Employee/CreateAccount",
+                    data: JSON.stringify(account),
+                    contentType: "application/json",
+                    success: function (response) {
+                        if (response.success) {
+                            sessionStorage.setItem('userEmail', email);
+                            sessionStorage.setItem('lastActivity', Date.now());
+
+                            $('#signUpSuccess').modal('show');
+                            $('#signUpSuccessClose').on('click', function () {
+                                window.location.href = 'Index';
+                            });
+                            
+                        } else {
+                            alert("Account creation failed: " + response.message);
+                        }
+                    },
+                    failure: function (response) {
+                        alert("Account creation failed: " + response.message);
+                    },
+                    error: function (response) {
+                        alert("Account creation failed: " + response.message);
+                    }
+                });
+            } else {
+                alert("Account with this email already exists!");
+            }
+        },
+        failure: function (response) {
+            alert("Account creation failed: " + response.message);
+        },
+        error: function (response) {
+            alert("Account creation failed: " + response.message);
+        }
+    });
+};
+
+function signIn() {
+    var email = $("#logemail").val();
+    var password = $("#logpass").val();
+    var account = {Email_A: email, Password: password};
+
+    $.ajax({
+        type: "POST",
+        url: "/Employee/Login",
+        contentType: "application/json",
+        data: JSON.stringify(account),
+        success: function (response) {
+            if (response.success) {
+                employeeSignIn = response.employee;
+
+                sessionStorage.setItem('userFullName', response.employee.fullName);
+                sessionStorage.setItem('userID', response.employee.employeeID);
+                sessionStorage.setItem('userEmail', response.employee.email);
+
+                // Set a timestamp for the user's last activity
+                sessionStorage.setItem('lastActivity', Date.now());
+
+                window.location.href = 'Index';
+            } else {
+                alert(response.message);
+            }
+        },
+        failure: function (response) {
+            alert("Login failed: " + response.message);
+        },
+        error: function (response) {
+            alert("Login failed: " + response.message);
+        }
+    });
+};
+
+function redirectToHR() {
+    const userFullName = sessionStorage.getItem('userFullName');
+    if (userFullName) {
+        window.location.href = '/Employee/Index';
+    } else {
+        window.location.href = '/Employee/Login';
+    }
+}

@@ -1,7 +1,9 @@
 ﻿using ManagerWebApplication.DAL;
 using ManagerWebApplication.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Mvc.ViewEngines;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using System.IO.Compression;
 
 namespace ManagerWebApplication.Controllers
@@ -10,11 +12,19 @@ namespace ManagerWebApplication.Controllers
     {
         private readonly Employee_DAL _dal;
         private readonly IWebHostEnvironment _hostEnvironment;
+        private readonly ICompositeViewEngine _viewEngine;
 
-        public EmployeeController(Employee_DAL dal, IWebHostEnvironment hostEnvironment)
+        public EmployeeController(Employee_DAL dal, IWebHostEnvironment hostEnvironment, ICompositeViewEngine viewEngine)
         {
             _dal = dal;
             _hostEnvironment = hostEnvironment;
+            _viewEngine = viewEngine;
+        }
+
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
         }
 
         [HttpGet]
@@ -67,6 +77,28 @@ namespace ManagerWebApplication.Controllers
         }
 
         [HttpGet]
+        public IActionResult GetEmployeeFromId(string id)
+        {
+            Employee? employee = _dal.GetEmployeeByID(id);
+            if (employee != null)
+            {
+                return Json(employee);
+            }
+            return Json(new { error = "Employee not found" });
+        }
+
+        [HttpGet]
+        public IActionResult GetEmployeeFromEmail(string email)
+        {
+            Employee? employee = _dal.GetEmployeeByEmail(email);
+            if (employee != null)
+            {
+                return Json(employee);
+            }
+            return Json(new { error = "Employee not found" });
+        }
+
+        [HttpGet]
         public IActionResult CreateEmployee()
         {
             List<Employee> departments = _dal.GetAllDepartments();
@@ -82,7 +114,7 @@ namespace ManagerWebApplication.Controllers
                 if (imageFile != null && imageFile.Length > 0)
                 {
                     // Image file name
-                    string imageName = employee.ID + "-" + DateTime.Now.ToString("yyyyMMddHHmmss") + Path.GetExtension(imageFile.FileName);
+                    string imageName = employee.EmployeeID + "-" + DateTime.Now.ToString("yyyyMMddHHmmss") + Path.GetExtension(imageFile.FileName);
 
                     // Path to save image
                     string imagePath = Path.Combine(_hostEnvironment.WebRootPath, "hr_images/avatar", imageName);
@@ -94,15 +126,15 @@ namespace ManagerWebApplication.Controllers
                     }
 
                     // Set URL to save
-                    employee.AvaName = "/hr_images/avatar/" + imageName;
+                    employee.AvatarName = "/hr_images/avatar/" + imageName;
                 }
                 else
                 {
                     // No new image selected, retain the existing URL
-                    employee.AvaName = "/hr_images/avatar/ava-default.png";
+                    employee.AvatarName = "/hr_images/avatar/ava-default.png";
                 }
 
-                if (ModelState.IsValid || (employee.ID != null && employee.FirstName != null && employee.LastName != null && employee.PositionID != null))
+                if (ModelState.IsValid || (employee.EmployeeID != null && employee.FirstName != null && employee.LastName != null && employee.PositionID != null))
                 {
                     _dal.CreateEmployee(employee);
                     ViewBag.SuccessMessage = "Inserted";
@@ -117,29 +149,184 @@ namespace ManagerWebApplication.Controllers
         }
 
         [HttpPost]
+        public IActionResult CreateAccount([FromBody] EmployeeAccount account)
+        {
+            try
+            {
+                if (account.Email_A != null && account.Password != null)
+                {
+                    var count = _dal.GetEmployeeAccountByEmail(account);
+                    if (count > 0)
+                    {
+                        return Json(new { success = false, message = "Email already exists" });
+                    }
+                    _dal.CreateAccount(account);
+                    return Json(new { success = true, message = "Created" });
+                }
+                else
+                {
+                    return Json(new { success = false, message = "Email and Password are required" });
+                }
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = ex.Message });
+            }
+        }
+
+        [HttpPost]
+        public IActionResult Login([FromBody] EmployeeAccount account)
+        {
+            try
+            {
+                if (account.Email_A != null && account.Password != null)
+                {
+                    var count = _dal.GetAccountLogin(account);
+                    if (count == 1)
+                    {
+                        var employee = _dal.GetEmployeeByEmail(account.Email_A);
+                        return Json(new { success = true, message = "Login successful", employee });
+                    }
+                    else
+                    {
+                        return Json(new { success = false, message = "Invalid email or password" });
+                    }
+                }
+                else
+                {
+                    return Json(new { success = false, message = "Email and Password are required" });
+                }
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = ex.Message });
+            }
+        }
+
+        [HttpPost]
+        public IActionResult UpdateAccount([FromBody] EmployeeAccount account)
+        {
+            try
+            {
+                if (account.Email_A != null && account.Password != null)
+                {
+                    _dal.UpdateAccount(account);
+                    return Json(new { success = true, message = "Updated" });
+                }
+                else
+                {
+                    return Json(new { success = false, message = "Email and Password are required" });
+                }
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = ex.Message });
+            }
+        }
+
+        [HttpPost]
         public IActionResult ImportEmployees(IFormFile eFile)
         {
-            if (eFile != null && eFile.Length > 0)
+            try
             {
-                string eFileExtension = Path.GetExtension(eFile.FileName);
-                string tempDirectory = Path.GetTempPath();
-                string tempFileName = Guid.NewGuid().ToString() + eFileExtension;
-                string eFilePath = Path.Combine(tempDirectory, tempFileName);
-                using (var stream = new FileStream(eFilePath, FileMode.Create))
+                if (eFile != null && eFile.Length > 0)
                 {
-                    eFile.CopyTo(stream);
+                    string eFileExtension = Path.GetExtension(eFile.FileName);
+                    string tempDirectory = Path.GetTempPath();
+                    string tempFileName = Guid.NewGuid().ToString() + eFileExtension;
+                    string eFilePath = Path.Combine(tempDirectory, tempFileName);
+                    using (var stream = new FileStream(eFilePath, FileMode.Create))
+                    {
+                        eFile.CopyTo(stream);
+                    }
+
+                    var employees = _dal.ReadEmployeeFile(eFilePath);
+
+                    var validEmployees = employees.Where(e => !string.IsNullOrWhiteSpace(e.EmployeeID) && !string.IsNullOrWhiteSpace(e.FirstName) && !string.IsNullOrWhiteSpace(e.LastName) && !string.IsNullOrWhiteSpace(e.PositionID)).ToList();
+
+                    var duplicates_noP = _dal.GetDuplicateEmployees(validEmployees);
+                    var duplicates = _dal.GetPositionForDuplicate(duplicates_noP);
+
+                    // Delete the file after importing
+                    System.IO.File.Delete(eFilePath);
+
+                    if (duplicates.Any())
+                    {
+                        var nonDuplicates = validEmployees.Except(duplicates_noP).ToList();
+
+                        string html = this.RenderPartialViewToString("_ConfirmDuplicates", duplicates);
+                        return Json(new { success = false, duplicates = true, html = html, nonDuplicates = nonDuplicates });
+                    }
+                    else
+                    {
+                        _dal.InsertEmployees(validEmployees);
+                        return Json(new { success = true });
+                    }
                 }
-
-                var employees = _dal.ReadEmployeeFile(eFilePath);
-                _dal.InsertEmployees(employees);
-
-                // Delete the file after importing
-                System.IO.File.Delete(eFilePath);
-
-                return Json(new { success = true });
+                else
+                {
+                    return Json(new { success = false, message = "No file uploaded or the file is empty." });
+                }
             }
-            return Json(new { success = false, message = "No file uploaded or the file is empty." });
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = ex.Message });
+            }
         }
+
+        public string RenderPartialViewToString(string viewName, object model)
+        {
+            ViewData.Model = model;
+            using (var writer = new StringWriter())
+            {
+                ViewEngineResult viewResult = _viewEngine.FindView(ControllerContext, viewName, false);
+                if (viewResult.View != null)
+                {
+                    ViewContext viewContext = new ViewContext(
+                        ControllerContext,
+                        viewResult.View,
+                        ViewData,
+                        TempData,
+                        writer,
+                        new HtmlHelperOptions()
+                    );
+                    viewResult.View.RenderAsync(viewContext).Wait();
+                }
+                return writer.GetStringBuilder().ToString();
+            }
+        }
+
+        //Update employee from Duplicate list
+        [HttpPost]
+        public IActionResult UpdateDuplicatedEmployees([FromBody] EmployeeSubModel model)
+        {
+            if (model.Filename == "duplicates")
+            {
+                try
+                {
+                    foreach (var employee in model.Employees)
+                    {
+                        _dal.UpdateEmployee(employee);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    return StatusCode(500, ex.Message);
+                }
+            } else if (model.Filename == "nonDuplicates")
+            {
+                try
+                {
+                    _dal.InsertEmployees(model.Employees);
+                }
+                catch (Exception ex)
+                {
+                    return StatusCode(500, ex.Message);
+                }
+            }
+            return Ok();
+        }
+
 
         [HttpPost]
         public async Task<IActionResult> UploadEmployeeImagesFolder(List<IFormFile> employeeImages)
@@ -284,7 +471,7 @@ namespace ManagerWebApplication.Controllers
                 if (imageFileUpdate != null && imageFileUpdate.Length > 0)
                 {
                     // Image file name
-                    string imageName = employee.ID + "-" + DateTime.Now.ToString("yyyyMMddHHmmss") + Path.GetExtension(imageFileUpdate.FileName);
+                    string imageName = employee.EmployeeID + "-" + DateTime.Now.ToString("yyyyMMddHHmmss") + Path.GetExtension(imageFileUpdate.FileName);
 
                     // Path to save image
                     string imagePath = Path.Combine(_hostEnvironment.WebRootPath, "hr_images/avatar", imageName);
@@ -296,19 +483,19 @@ namespace ManagerWebApplication.Controllers
                     }
 
                     // Set URL to save
-                    employee.AvaName = "/hr_images/avatar/" + imageName;
+                    employee.AvatarName = "/hr_images/avatar/" + imageName;
                 }
                 else
                 {
                     // No new image selected, retain the existing URL
-                    Employee? existingEmployee = _dal.GetEmployeeByID(employee.ID!);
+                    Employee? existingEmployee = _dal.GetEmployeeByID(employee.EmployeeID!);
                     if (existingEmployee != null)
                     {
-                        employee.AvaName = existingEmployee.AvaName;
+                        employee.AvatarName = existingEmployee.AvatarName;
                     }
                 }
 
-                if (ModelState.IsValid || (employee.ID != null && employee.FirstName != null && employee.LastName != null && employee.PositionID != null))
+                if (ModelState.IsValid || (employee.EmployeeID != null && employee.FirstName != null && employee.LastName != null && employee.PositionID != null))
                 {
                     _dal.UpdateEmployee(employee);
                     ViewBag.SuccessMessage = "Updated";
@@ -336,6 +523,53 @@ namespace ManagerWebApplication.Controllers
             }
 
             return Json(positionsbyDepartment);
+        }
+
+        [HttpGet]
+        public IActionResult GetDepartments()
+        {
+            List<Employee> departments = new List<Employee>();
+            try
+            {
+                departments = _dal.GetAllDepartments();
+            }
+            catch (Exception ex)
+            {
+                TempData["errorMessage"] = ex.Message;
+            }
+
+            return Json(departments);
+        }
+
+        [HttpPost]
+        public IActionResult ExportToExcel([FromBody] EmployeeSubModel model)
+        {
+            if (model == null || model.Employees == null || model.Filename == null || model.Columns == null)
+            {
+                return BadRequest("Error");
+            }
+            string filePath = Path.Combine(_hostEnvironment.WebRootPath, "temp", model.Filename);
+            string? directoryName = Path.GetDirectoryName(filePath);
+            if (directoryName != null)
+            {
+                Directory.CreateDirectory(directoryName);
+            }
+
+            _dal.ExportExcelFile(filePath, model.Employees, model.Columns);
+
+            return Ok(filePath);
+        }
+
+        [HttpGet]
+        public IActionResult DownloadExcelFile(string filePath)
+        {
+            var memory = new MemoryStream();
+            using (var stream = new FileStream(filePath, FileMode.Open))
+            {
+                stream.CopyTo(memory);
+            }
+            memory.Position = 0;
+            return File(memory, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", Path.GetFileName(filePath));
         }
     }
 }

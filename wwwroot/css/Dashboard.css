@@ -1,0 +1,428 @@
+﻿@font-face {
+    font-family: 'Metropolis-ExtraLight';
+    src: url('woff2/Metropolis-ExtraLight.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #101e32;
+}
+
+.db-btn {
+    background-color: transparent;
+    width: 230px;
+    height: 230px;
+    border: 2px solid white;
+    border-radius: 1.5em;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    font-family: "Jost";
+    font-size: 30px;
+    font-weight: 600;
+}
+
+    .db-btn:hover, .db-btn:focus {
+        color: #fff;
+        outline: 0;
+    }
+
+.db-btn {
+    -webkit-transition: box-shadow 200ms ease-in-out, color 200ms ease-in-out;
+    transition: box-shadow 200ms ease-in-out, color 200ms ease-in-out;
+}
+
+.btn-user:hover, .btn-user:focus {
+    color: #fff;
+    outline: 0;
+}
+.btn-user {
+    width: 200px;
+    height: 60px;
+    border: 2px solid white;
+    color: #101e32;
+    border-radius: 3em;
+    border-color: #3498db;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+}
+
+.sign-in-btn {
+    font-family: 'Metropolis-ExtraLight', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    border: 2px solid #2ecc71;
+    box-shadow: 0 0 40px 40px #2ecc71 inset, 0 0 0 0 #2ecc71;
+}
+    .sign-in-btn:hover {
+        color: white;
+        box-shadow: 0 0 10px 0 #2ecc71 inset, 0 0 10px 4px #2ecc71;
+        background-color: transparent;
+    }
+.hr-btn:hover {
+    box-shadow: 0 0 130px 130px #EB9532 inset;
+    color: #013952;
+}
+
+.ps-btn:hover {
+    box-shadow: 0 0 130px 130px #16A085 inset;
+    color: #013952;
+}
+
+.pm-btn:hover {
+    box-shadow: 0 0 130px 130px #C4C63F inset;
+    color: #013952;
+}
+
+.dc-btn:hover {
+    box-shadow: 0 0 130px 130px #C63F3F inset;
+    color: #013952;
+}
+
+/* Modal */
+#logInModal .modal-content {
+    /*background-color: #305ea3;*/
+    /*background-color: #25487d;*/
+    background-color: #203e6f;
+}
+
+.signin-header {
+    position: relative;
+}
+.signin-header .btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    z-index: 100;
+    border: none;
+    font-size: 30px;
+    transition: ease-in-out 0.3s;
+}
+
+#logInModal a {
+    cursor: pointer;
+    transition: all 200ms linear;
+}
+
+    a:hover {
+        text-decoration: none;
+    }
+
+#logInModal .link {
+    color: #fff;
+}
+
+    #logInModal .link:hover {
+        color: #14a44d;
+    }
+
+#logInModal .col-12{
+    margin-top: 20px;
+}
+
+#logInModal p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+#logInModal h4 {
+    color: white;
+    font-weight: 600;
+}
+
+#logInModal h6 span {
+    color: white;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    border-radius: 30px;
+    margin: 0 5px;
+}
+#logInModal .login-span {
+    background-color: #14a44d;
+}
+#logInModal .signup-span {
+    /*background-color: #3b71ca;*/
+    background-color: #dc4c64;
+}
+
+#logInModal .section {
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+#logInModal .full-height {
+    min-height: 80vh;
+}
+
+#logInModal input[type="password"]::-ms-reveal {
+    filter: invert(100%);
+}
+
+#logInModal [type="checkbox"]:checked,
+#logInModal [type="checkbox"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+#logInModal .checkbox:checked + label,
+#logInModal .checkbox:not(:checked) + label {
+    position: relative;
+    display: block;
+    text-align: center;
+    width: 60px;
+    height: 16px;
+    border-radius: 2px;
+    padding: 0;
+    margin: 20px auto;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+    #logInModal .checkbox:checked + label:before,
+    #logInModal .checkbox:not(:checked) + label:before {
+        position: absolute;
+        display: block;
+        width: 36px;
+        height: 36px;
+        /*border: 10px solid #2a2b38;*/
+        border-radius: 10%;
+        color: #EA2C62;
+        background-color: #ffd21e;
+        content: '';
+        z-index: 20;
+        font-size: 12px;
+        top: -10px;
+        left: -10px;
+        line-height: 36px;
+        text-align: center;
+        font-size: 24px;
+        transition: all 0.5s ease;
+    }
+
+#logInModal .checkbox:checked + label:before {
+    transform: translateX(44px) rotate(-270deg);
+}
+
+#logInModal .card-3d-wrap {
+    position: relative;
+    width: 440px;
+    max-width: 100%;
+    height: 400px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    perspective: 800px;
+    margin-top: 40px;
+}
+
+#logInModal .card-3d-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: all 600ms ease-out;
+}
+
+#logInModal .login-div {
+    width: 150px;
+}
+
+#logInModal .card-front,
+#logInModal .card-back {
+    width: 100%;
+    height: 100%;
+    background-color: #2a2b38;
+    position: absolute;
+    border-radius: 0px;
+    left: 0;
+    top: 0;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+#logInModal .card-back {
+    transform: rotateY(180deg);
+}
+
+#logInModal .checkbox:checked ~ .card-3d-wrap .card-3d-wrapper {
+    transform: rotateY(180deg);
+}
+
+#logInModal .center-wrap {
+    position: absolute;
+    width: 100%;
+    padding: 0 35px;
+    top: 45%;
+    left: 0;
+    transform: translate3d(0, -50%, 35px) perspective(100px);
+    z-index: 20;
+    display: block;
+}
+
+#logInModal .form-group {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+#logInModal .form-style {
+    padding: 13px 20px;
+    padding-left: 55px;
+    height: 48px;
+    width: 100%;
+    font-weight: 500;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+    outline: none;
+    color: white;
+    background-color: #1f2029;
+    border: none;
+    transition: all 200ms linear;
+    box-shadow: 0 4px 8px 0 rgba(21, 21, 21, .2);
+}
+
+    #logInModal .form-style:focus,
+    #logInModal .form-style:active {
+        border: none;
+        outline: none;
+        box-shadow: 0 4px 8px 0 rgba(21, 21, 21, .2);
+    }
+
+#logInModal .input-icon {
+    position: absolute;
+    top: 0;
+    left: 18px;
+    height: 48px;
+    font-size: 24px;
+    line-height: 48px;
+    text-align: left;
+    color: #5fcfff;
+    transition: all 200ms linear;
+}
+
+#logInModal .form-group input:-ms-input-placeholder {
+    color: #c4c3ca;
+    opacity: 0.7;
+    transition: all 200ms linear;
+}
+
+#logInModal .form-group input::-moz-placeholder {
+    color: #c4c3ca;
+    opacity: 0.7;
+    transition: all 200ms linear;
+}
+
+#logInModal .form-group input:-moz-placeholder {
+    color: #c4c3ca;
+    opacity: 0.7;
+    transition: all 200ms linear;
+}
+
+#logInModal .form-group input::-webkit-input-placeholder {
+    color: #c4c3ca;
+    opacity: 0.7;
+    transition: all 200ms linear;
+}
+
+#logInModal .form-group input:focus:-ms-input-placeholder {
+    opacity: 0;
+    transition: all 200ms linear;
+}
+
+#logInModal .form-group input:focus::-moz-placeholder {
+    opacity: 0;
+    transition: all 200ms linear;
+}
+
+#logInModal .form-group input:focus:-moz-placeholder {
+    opacity: 0;
+    transition: all 200ms linear;
+}
+
+#logInModal .form-group input:focus::-webkit-input-placeholder {
+    opacity: 0;
+    transition: all 200ms linear;
+}
+
+#logInModal .btn {
+    border-radius: 4px;
+    height: 48px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 200ms linear;
+    padding: 0 30px;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    text-align: center;
+    border: none;
+    color: #fff;
+}
+
+#logInModal .card-front .btn {
+    background-color: #14a44d;
+    box-shadow: 0 8px 24px 0 rgba(18, 248, 173, .2);
+}
+#logInModal .card-front .btn:active,
+#logInModal .card-front .btn:focus {
+    background-color: #fff;
+    color: #14a44d;
+    box-shadow: 0 8px 24px 0 rgba(255, 255, 255, .2);
+}
+
+#logInModal .card-front .btn:hover {
+    background-color: #fff;
+    color: #14a44d;
+    box-shadow: 0 8px 24px 0 rgba(255, 255, 255, .2);
+}
+
+#logInModal .card-back .btn {
+    /*background-color: #3b71ca;*/
+    background-color: #dc4c64;
+    box-shadow: 0 8px 24px 0 rgba(255, 108, 122, .2);
+}
+    #logInModal .card-back .btn:active,
+    #logInModal .card-back .btn:focus {
+        background-color: #fff;
+        /*color: #3b71ca;*/
+        color: #dc4c64;
+        box-shadow: 0 8px 24px 0 rgba(255, 255, 255, .2);
+    }
+
+    #logInModal .card-back .btn:hover {
+        background-color: #fff;
+        /*color: #3b71ca;*/
+        color: #dc4c64;
+        box-shadow: 0 8px 24px 0 rgba(255, 255, 255, .2);
+    }
+
+#logInModal .logo {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    display: block;
+    z-index: 100;
+    transition: all 250ms linear;
+}
+
+    #logInModal .logo img {
+        height: 26px;
+        width: auto;
+        display: block;
+    }

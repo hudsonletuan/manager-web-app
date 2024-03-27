@@ -1,11 +1,13 @@
 using ManagerWebApplication.DAL;
 using Microsoft.AspNetCore.Http.Features;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<Employee_DAL>();
+
 
 builder.Services.Configure<FormOptions>(options =>
 {

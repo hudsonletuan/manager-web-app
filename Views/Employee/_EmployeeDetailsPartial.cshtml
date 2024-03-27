@@ -8,21 +8,21 @@
                 <div class="col-lg-4">
                     <div class="card mb-4">
                         <div class="card-body text-center">
-                            <h5 class="mt-0 mb-2 employee-id">@Model.ID</h5>
-                            <img src="@Model.AvaName" alt="avatar"
+                            <h5 class="mt-0 mb-2 employee-id">@Model.EmployeeID</h5>
+                            <img src="@Model.AvatarName" alt="avatar"
                                  class="rounded-circle img-fluid" style="width: 150px; height: 150px; object-fit: cover;">
                             <h5 class="mt-2 mb-1">@Model.FullName</h5>
                             <p class="text-muted">@Model.PositionName</p>
                             <p class="employee-firstname-view" hidden>@Model.FirstName</p>
                             <p class="employee-lastname-view" hidden>@Model.LastName</p>
                             <div class="d-flex justify-content-center mb-2">
-                                <button type="button" class="btn btn-warning edit-employee" data-employee-id="@Model.ID">Edit</button>
-                                <button type="button" class="btn btn-success ms-1">Message</button>
+                                <button type="button" class="btn btn-warning edit-employee" data-employee-id="@Model.EmployeeID">Edit</button>
+                                <button type="button" class="btn btn-success ms-1" data-bs-toggle="modal" data-bs-target="#sendingEmailModal">Email</button>
                                 <button type="button" class="btn btn-secondary ms-1" data-bs-dismiss="modal" aria-label="Close">Close</button>
                             </div>
                             <div class="card-body text-center">
                                 <div class="d-flex justify-content-center mb-2">
-                                    <button type="button" class="btn btn-danger delete-employee ms-1" data-employee-id="@Model.ID">Delete</button>
+                                    <button type="button" class="btn btn-danger delete-employee ms-1" data-employee-id="@Model.EmployeeID">Delete</button>
                                 </div>
                             </div>
                         </div>
@@ -90,7 +90,7 @@
                                     <p class="mb-0">Ava Name</p>
                                 </div>
                                 <div class="col-sm-8">
-                                    <p class="text-muted mb-0">@Model.AvaName</p>
+                                    <p class="text-muted mb-0">@Model.AvatarName</p>
                                 </div>
                             </div>
                             <hr>
@@ -99,7 +99,7 @@
                                     <p class="mb-0">Address</p>
                                 </div>
                                 <div class="col-sm-8">
-                                    <p class="text-muted mb-0">Bay Area, San Francisco, CA</p>
+                                    <p class="text-muted mb-0">@Model.LocalAddress</p>
                                 </div>
                             </div>
                         </div>
@@ -113,3 +113,52 @@ else
 {
     <p>Employee not found!</p>
 }
+
+<!-- Modal sending email -->
+<div class="modal fade" id="sendingEmailModal" tabindex="-1" role="dialog" data-bs-backdrop="static" aria-labelledby="sendingEmailModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header" hidden>
+                <h5 class="modal-title" id="sendingEmailModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="email-body">
+                    <div class="email-sender d-flex align-items-center mb-2">
+                        <label for="emailSender" class="form-label mb-0 col-2">From<span class="text-danger ms-2">*</span></label>
+                        <input type="text" class="form-control mb-0 email-sender-input" id="emailSender" name="emailSender" value="" required />
+                    </div>
+                    <div class="email-receiver d-flex align-items-center mb-2">
+                        <label for="emailReceiver" class="form-label mb-0 col-2">To<span class="text-danger ms-2">*</span></label>
+                        <input type="text" class="form-control mb-0 email-receiver-input" id="emailReceiver" name="emailReceiver" value="@Model.Email" required />
+                    </div>
+                    <div class="email-cc d-flex align-items-center mb-2">
+                        <label for="emailCC" class="form-label mb-0 col-2">CC</label>
+                        <input type="text" class="form-control mb-0 email-cc-input" id="emailCC" name="emailCC" value="" />
+                    </div>
+                    <div class="email-bcc d-flex align-items-center mb-2">
+                        <label for="emailBCC" class="form-label mb-0 col-2">BCC</label>
+                        <input type="text" class="form-control mb-0 email-bcc-input" id="emailBCC" name="emailBCC" value="" />
+                    </div>
+                    <div class="email-subject d-flex align-items-center mb-2">
+                        <label for="emailSubject" class="form-label mb-2 col-2">Subject</label>
+                        <input type="text" class="form-control mb-0 email-subject-input" id="emailSubject" name="emailSubject" value="" />
+                    </div>
+                    <div class="email-content">
+                        <label for="emailContent" class="form-label mb-2">Content<span class="text-danger ms-2">*</span></label>
+                        <textarea class="form-control mb-0 email-content-input" id="emailContent" name="emailContent" rows="5" required></textarea>
+                    </div>
+                </div>
+                <hr />
+                <div class="email-button d-flex justify-content-end">
+                    <button type="button" class="btn btn-secondary ms-1" data-bs-dismiss="modal" aria-label="Close">Discard</button>
+                    <button type="button" class="btn btn-primary ms-1" id="sendEmail">
+                        Send <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+                            <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

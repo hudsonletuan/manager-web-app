@@ -1,4 +1,7 @@
-﻿
+﻿@{
+    List<Employee>? departments = ViewData["Departments"] as List<Employee>;
+}
+
 <div class="modal-header" hidden>
     <h5 class="modal-title" id="createEmployeeModalLabel">Create Employee</h5>
     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -12,12 +15,12 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-sm-3" style="text-align: right;">
-                                    <label for="ID" class="form-label mb-0" hidden>ID</label>
+                                    <label for="employeeID" class="form-label mb-0" hidden>ID</label>
                                     <i class="bi bi-check-circle id-right h3" style="color: green;" hidden></i>
                                     <i class="bi bi-x-circle id-wrong h3" style="color: red;" hidden></i>
                                 </div>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control mb-0 required-input" style="border: solid 2px" id="ID" name="ID" placeholder="ID" required>
+                                    <input type="text" class="form-control mb-0 required-input" style="border: solid 2px" id="employeeID" name="employeeID" placeholder="ID" required>
                                 </div>
                             </div>
                         </div>
@@ -35,7 +38,7 @@
                             <div class="d-flex justify-content-center mb-2">
                                 <button type="submit" class="btn btn-success">Create</button>
                                 <button type="button" class="btn btn-warning btn-clear ms-1">Clear</button>
-                                <button type="button" class="btn btn-secondary ms-1" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                                <button type="button" class="btn btn-secondary ms-1" data-bs-dismiss="modal" id="closeCreateModalBtn" aria-label="Close">Close</button>
                             </div>
                         </div>
                     </div>
@@ -78,23 +81,27 @@
                             </div>
                             <hr />
                             <div class="row">
-                                <div class="col-auto">
-                                    <label for="genderCreate" class="form-label mb-0 form-gender-label">Gender</label>
-                                    <select class="form-control form-select mb-0 form-gender-dropdown" id="genderCreate" name="genderCreate">
-                                        <option value="" class="default-gender">Select...</option>
-                                    </select>
+                                <div class="row" style="margin-bottom: 10px;">
+                                    <div class="col-auto">
+                                        <label for="genderCreate" class="form-label mb-0 form-gender-label">Gender</label>
+                                        <select class="form-control form-select mb-0 form-gender-dropdown" id="genderCreate" name="genderCreate">
+                                            <option value="" class="default-gender">Select...</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-auto">
+                                        <label for="dateOfBirth" class="form-label mb-0">Date of Birth</label>
+                                        <input type="date" class="form-control mb-0" id="dateOfBirth" name="dateOfBirth">
+                                    </div>
                                 </div>
-                                <div class="col-auto">
-                                    <label for="dateOfBirth" class="form-label mb-0">Date of Birth</label>
-                                    <input type="date" class="form-control mb-0" id="dateOfBirth" name="dateOfBirth">
-                                </div>
-                                <div class="col-auto">
-                                    <label for="email" class="form-label mb-0">Email</label>
-                                    <input type="text" class="form-control mb-0" id="email" name="email">
-                                </div>
-                                <div class="col-auto">
-                                    <label for="phoneNumber" class="form-label mb-0">Phone Number</label>
-                                    <input type="text" class="form-control mb-0" id="phoneNumber" name="phoneNumber">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <label for="email" class="form-label mb-0">Email</label>
+                                        <input type="text" class="form-control mb-0" id="email" name="email">
+                                    </div>
+                                    <div class="col-5">
+                                        <label for="phoneNumber" class="form-label mb-0">Phone Number</label>
+                                        <input type="text" class="form-control mb-0" id="phoneNumber" name="phoneNumber">
+                                    </div>
                                 </div>
                             </div>
                             <hr />
@@ -103,13 +110,15 @@
                                     <label for="localAddress" class="form-label mb-0">Address</label>
                                     <input type="text" class="form-control mb-0" id="localAddress" name="localAddress">
                                 </div>
-                                <div class="col-auto">
-                                    <label for="startDate" class="form-label mb-0">Start Date</label>
-                                    <input type="date" class="form-control mb-0" id="startDate" name="startDate">
-                                </div>
-                                <div class="col-auto">
-                                    <label for="endDate" class="form-label mb-0">End Date</label>
-                                    <input type="date" class="form-control mb-0" id="endDate" name="endDate">
+                                <div class="row" style="margin-top: 10px;">
+                                    <div class="col-auto">
+                                        <label for="startDate" class="form-label mb-0">Start Date</label>
+                                        <input type="date" class="form-control mb-0" id="startDate" name="startDate">
+                                    </div>
+                                    <div class="col-auto">
+                                        <label for="endDate" class="form-label mb-0">End Date</label>
+                                        <input type="date" class="form-control mb-0" id="endDate" name="endDate">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -137,7 +146,7 @@
     </div>
 </div>
 
-<!-- Modal showing delete confirmation -->
+<!-- Modal showing conflict confirmation -->
 <div class="modal fade" id="createErrorModal" tabindex="-1" role="dialog" data-bs-backdrop="static">
     <div class="modal-dialog modal-dialog-centered modal-sm create-error" role="document">
         <div class="modal-content">
