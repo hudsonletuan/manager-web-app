@@ -1349,6 +1349,7 @@
                         cellValue = new Date(cellValue).toLocaleDateString();
                     }
                 }
+                cellValue = `"${cellValue.replace(/"/g, '""')}"`;
                 row.push(cellValue);
             }
             csvRows.push(row);
