@@ -1,6 +1,6 @@
 # Human Resources Manager - .NET Core Project
 
-The Human Resources Manager is a web-based application designed to manage employee information for a company. The application allows users to create, read, update, and delete employee records, as well as import and export employee data to and from Excel files.
+The Human Resources Manager is a web-based application designed to manage employee information for a company. The application allows users to create, read, update, and delete employee records, as well as import employee data from EXCEL and CSV files and export employee data to Excel, PDF, and CSV files.
 
 <h3 align="center"> Deployed on Azure </h3>
 <p align="center">
@@ -11,7 +11,8 @@ The Human Resources Manager is a web-based application designed to manage employ
 
 * User authentication and authorization
 * Employee record management (create, read, update, delete)
-* Employee data import and export to and from Excel files
+* Employee data import from Excel and CSV files
+* Employee data export to Excel, PDF, and CSV files
 * Employee data search and filtering
 * Column selection for employee data display
 * Responsive design for desktop and mobile devices
@@ -40,7 +41,7 @@ git clone https://github.com/hudsonletuan/human-resources-manager.git
 2. Open the solution file (ManagerWebApplication.sln) in Visual Studio.
 3. Restore the NuGet packages for the solution.
 4. Build the solution.
-5. Enter the connection string in appsettings.json file.
+5. Enter the connection string in the appsettings.json file.
 6. Run the application.
 
 ## Usage
@@ -49,7 +50,7 @@ git clone https://github.com/hudsonletuan/human-resources-manager.git
 
 * To access the application, you must first sign in with a valid user account. If you do not have an account, you can sign up for one by clicking the "Sign Up" link on the login page.
 
-* Once you are signed in, you will have access to the employee record management features of the application, based on your user role.
+* Once you are signed in, you will have access to the employee record management features of the application. You can only be able to access the application after completing your profile.
 
 ### Employee Record Management
 
@@ -61,9 +62,11 @@ git clone https://github.com/hudsonletuan/human-resources-manager.git
 
 ### Employee Data Import and Export
 
-* To import employee data from an Excel file, click the "Import" button on the main page and select the file to import. The application will validate the data and display any errors or warnings. If the data is valid, click "Import" to import the data into the application.
+* To import employee data from an Excel file, click the "Import" button on the main page and select the file to import. The application will validate the data and display any errors or warnings. It will show the duplicates from the uploaded file as long as the differences in details, then you can pick what users you want to overwrite.
 
 * To export employee data to an Excel file, click the "Export" button on the main page and select the file format (XLS or XLSX). The application will generate the file and prompt you to save it to your local machine.
+
+* This application also allows you to export the employee data to a PDF or CSV file for your convenience.
 
 ### Employee Data Search and Filtering
 
