@@ -17,7 +17,7 @@
                             <p class="employee-lastname-view" hidden>@Model.LastName</p>
                             <div class="d-flex justify-content-center mb-2">
                                 <button type="button" class="btn btn-warning edit-employee" data-employee-id="@Model.EmployeeID">Edit</button>
-                                <button type="button" class="btn btn-success ms-1" data-bs-toggle="modal" data-bs-target="#sendingEmailModal">Email</button>
+                                <button type="button" class="btn btn-success ms-1" id="sendEmailToEmp" data-bs-toggle="modal" data-bs-target="#sendingEmailModal">Email</button>
                                 <button type="button" class="btn btn-secondary ms-1" data-bs-dismiss="modal" aria-label="Close">Close</button>
                             </div>
                             <div class="card-body text-center">
@@ -126,7 +126,7 @@ else
                 <div class="email-body">
                     <div class="email-sender d-flex align-items-center mb-2">
                         <label for="emailSender" class="form-label mb-0 col-2">From<span class="text-danger ms-2">*</span></label>
-                        <input type="text" class="form-control mb-0 email-sender-input" id="emailSender" name="emailSender" value="" required />
+                        <input type="text" class="form-control mb-0 email-sender-input" id="emailSender" name="emailSender" value="" required readonly />
                     </div>
                     <div class="email-receiver d-flex align-items-center mb-2">
                         <label for="emailReceiver" class="form-label mb-0 col-2">To<span class="text-danger ms-2">*</span></label>
@@ -162,3 +162,25 @@ else
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function () {
+        function setEmailSenderInput() {
+            let userEmail = sessionStorage.getItem('userEmail');
+            if (userEmail) {
+                $('#emailSender').val(userEmail);
+            }
+        }
+
+        $('#sendingEmailModal').off('show.bs.modal').on('show.bs.modal', function () {
+            setEmailSenderInput();
+        });
+    });
+</script>
+<style>
+    input:read-only {
+        background-color: #212529 !important;
+        color: #FFF !important;
+        border: none !important;
+    }
+</style>

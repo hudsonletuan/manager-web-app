@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "L4E+iGpIqi8ua5/j0Qt6Jo9Uk2dF+oMXXCb/M8p3Qi4=",
+  "Hash": "E41n6FX2RuAy/p0WJJZP0UALuSHFPJoUoyhEpUGJchE=",
   "Source": "ManagerWebApplication",
   "BasePath": "_content/ManagerWebApplication",
   "Mode": "Default",
@@ -5905,44 +5905,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
-    },
-    {
-      "Identity": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\temp\\EmployeeData.xls",
-      "SourceId": "ManagerWebApplication",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\",
-      "BasePath": "_content/ManagerWebApplication",
-      "RelativePath": "temp/EmployeeData.xls",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\temp\\EmployeeData.xls"
-    },
-    {
-      "Identity": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\temp\\EmployeeData.xlsx",
-      "SourceId": "ManagerWebApplication",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\",
-      "BasePath": "_content/ManagerWebApplication",
-      "RelativePath": "temp/EmployeeData.xlsx",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\temp\\EmployeeData.xlsx"
     }
   ]
 }

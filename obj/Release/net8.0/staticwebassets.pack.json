@@ -1237,14 +1237,6 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\temp\\EmployeeData.xls",
-      "PackagePath": "staticwebassets\\temp\\EmployeeData.xls"
-    },
-    {
-      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\temp\\EmployeeData.xlsx",
-      "PackagePath": "staticwebassets\\temp\\EmployeeData.xlsx"
-    },
-    {
       "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.ManagerWebApplication.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

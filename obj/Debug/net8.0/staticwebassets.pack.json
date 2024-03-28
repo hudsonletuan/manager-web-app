@@ -961,6 +961,10 @@
       "PackagePath": "staticwebassets\\hr_images\\others\\filetemp.svg"
     },
     {
+      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\others\\hr-manager-featured.png",
+      "PackagePath": "staticwebassets\\hr_images\\others\\hr-manager-featured.png"
+    },
+    {
       "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\hr_images\\others\\imageadd.svg",
       "PackagePath": "staticwebassets\\hr_images\\others\\imageadd.svg"
     },
@@ -1235,14 +1239,6 @@
     {
       "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
-    },
-    {
-      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\temp\\EmployeeData.xls",
-      "PackagePath": "staticwebassets\\temp\\EmployeeData.xls"
-    },
-    {
-      "Id": "D:\\COMPUTER SCIENCE\\PROJECTS\\DotNetWebApp\\ManagerWebApp\\ManagerWebApplication\\wwwroot\\temp\\EmployeeData.xlsx",
-      "PackagePath": "staticwebassets\\temp\\EmployeeData.xlsx"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ManagerWebApplication.Microsoft.AspNetCore.StaticWebAssets.props",
